@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.StartActivity">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_start"
+        app:riv_corner_radius_top_left="@dimen/cornerRadius"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:text="  VELKOMMEN\nTIL MASSER AF\n  NYE FORDELE\n OG RABATTER"
+        android:textColor="@color/white"
+        android:textStyle="bold|normal"
+        android:textSize="@dimen/sizeOfText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:text="@string/vis_fordele"
+        android:textSize="@dimen/smallTextActivityStart"
+        android:textStyle="bold|normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/textView4"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="@style/BlueButtons"
+        android:text="@string/start"
+        android:layout_width="139dp"
+        android:layout_height="53dp"
+        android:id="@+id/buttonStartInActivityStart"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <include layout="@layout/logo_layout"/>
+
+</RelativeLayout>

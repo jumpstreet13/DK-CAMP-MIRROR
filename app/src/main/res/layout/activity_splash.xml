@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.SplashActivity">
+
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageViewInMainActivity"
+        android:src="@drawable/background_splash"
+        app:riv_corner_radius_top_left="@dimen/cornerRadius"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:indeterminateDrawable="@drawable/customspinner"
+        android:indeterminateOnly="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressBar8" />
+
+    <TextView
+        android:text="@string/om_lidt_f_r_ndu_det_hele_n_serveret"
+        android:textColor="@color/white"
+        android:textStyle="bold|normal"
+        android:textSize="@dimen/sizeOfText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/progressBar8"
+        android:layout_centerHorizontal="true" />
+
+    <include layout="@layout/logo_layout"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DK-CAMP-MIRROR</string>
+    <string name="om_lidt_f_r_ndu_det_hele_n_serveret">OM LIDT FÅR\nDU DET HELE\n SERVERET</string>
+    <string name="velkommen_ntil_masser_af_n_nye_fordele_n_og_rabatter">VELKOMMEN\nTIL MASSER AF\n NYE FORDELE\n OG RABATTER</string>
+    <string name="vis_fordele">VIS FORDELE</string>
+    <string name="start">Start</string>
+    <string name="tilmeld">TILMELD</string>
+    <string name="e_mail">E-mail</string>
+    <string name="adgangskode">Adgangskode</string>
+    <string name="glemt_kode">GLEMT KODE?</string>
+    <string name="log_in">LOG IN</string>
+    <string name="tilmelding">TILMELDING</string>
+    <string name="pladser_t_t_p">PLADSER TÆT PÅ</string>
+    <string name="min_profil">MIN PROFIL</string>
+    <string name="camping_id">CAMPING ID</string>
+    <string name="fordele">FORDELE</string>
+    <string name="t_t_p">TÆT PÅ</string>
+    <string name="spil_og_vind">SPIL OG VIND</string>
+</resources>
