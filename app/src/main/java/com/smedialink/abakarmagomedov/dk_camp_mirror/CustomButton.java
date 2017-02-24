@@ -2,6 +2,7 @@ package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -11,6 +12,7 @@ import android.widget.Button;
 public class CustomButton extends Button {
 
     private Paint paint;
+    private boolean isBottom;
 
     public CustomButton(Context context) {
         super(context);
@@ -19,12 +21,12 @@ public class CustomButton extends Button {
 
     public CustomButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context,attrs, 0);
     }
 
     public CustomButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(context, attrs, defStyleAttr);
     }
 
     void init(){
@@ -34,10 +36,17 @@ public class CustomButton extends Button {
         paint.setStrokeWidth(6);
     }
 
+    void init(Context context, AttributeSet attrs, int defStyle){
+        init();
+        final TypedArray styledAttributes = context.getTheme().obtainStyledAttributes(attrs,R.styleable.CustomButton,0,0);
+        isBottom = styledAttributes.getBoolean(R.styleable.CustomButton_whereDrawLine, true);
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-        canvas.drawLine(getPaddingLeft(), this.getMeasuredHeight()/1.2f, 380,this.getMeasuredHeight()/1.2f,paint);
+        int length = 350;
+        if(!isBottom) {canvas.drawLine(getPaddingLeft(), this.getMeasuredHeight()*0.1f, length,this.getMeasuredHeight()*0.1f,paint);}
+        if(isBottom) {canvas.drawLine(getPaddingLeft(), this.getMeasuredHeight()/1.4f, length,this.getMeasuredHeight()/1.4f,paint);}
     }
 }

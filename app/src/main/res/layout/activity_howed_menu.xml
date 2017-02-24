@@ -38,6 +38,7 @@
         <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
         style="@style/ButtonsInHowedMenu"
         android:text="@string/camping_id"
+        app:whereDrawLine="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonCampingId"

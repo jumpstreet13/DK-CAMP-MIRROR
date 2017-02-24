@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">DK-CAMP-MIRROR</string>
     <string name="om_lidt_f_r_ndu_det_hele_n_serveret">OM LIDT FÅR\nDU DET HELE\n SERVERET</string>
-    <string name="velkommen_ntil_masser_af_n_nye_fordele_n_og_rabatter">VELKOMMEN\nTIL MASSER AF\n NYE FORDELE\n OG RABATTER</string>
+    <string name="velkommen_ntil_masser_af_n_nye_fordele_n_og_rabatter">VELKOMMEN\nTIL MASSER AF\n
+        NYE FORDELE\n OG RABATTER
+    </string>
     <string name="vis_fordele">VIS FORDELE</string>
     <string name="start">Start</string>
     <string name="tilmeld">TILMELD</string>
@@ -17,4 +19,33 @@
     <string name="t_t_p">TÆT PÅ</string>
     <string name="spil_og_vind">SPIL OG VIND</string>
     <string name="menu">MENU</string>
+    <string name="rabatter">RABATTER</string>
+    <string name="oplevelser">OPLEVELSER</string>
+    <string name="bil_vogn">BIL VOGN</string>
+    <string name="jensens_b_fhus">JENSENS BØFHUS</string>
+    <string
+        name="ria_sus_dolorest_eratibu_stiatur_aut_ad_nquae_nonsequae_corit_et_quatis_ad_quinda_si_bl">
+        <![CDATA[Ria sus dolorest eratibu stiatur aut ad\nquae nonsequae corit et quatis ad quinda si bl. >>]]></string>
+    <string name="f_rup_sommerland">FÅRUP SOMMERLAND</string>
+    <string
+        name="ria_sus_dolorest_eratibad_quae_nonsequae_corit_net_quat_omnis_ad_qui_audanda_si_bl">
+        <![CDATA[Ria sus dolorest eratibad quae nonsequae corit\net quat omnis ad qui audanda si bl. >>]]></string>
+    <string name="ria_sus_dolore">Ria sus dolorest eratibu stiatur aut ad quae\nnonsequae corit et
+        quat omnis ad qui auda si blam\nressunt pratur mollent, tore volorum et magnent imporit
+        anihillibus etur acestrum, sed que vi.
+    </string>
+    <string name="spil_gratis_og_vind">SPIL GRATIS OG VIND!</string>
+    <string name="et_helt">- et helt års forbrug af kaffe, gratis camping\neller nogle af de mange
+        sjove gavekort.\nVi finder nye vindere hver uge!
+    </string>
+    <string name="spar_25_p_menuen">SPAR 25% PÅ MENUEN</string>
+    <string name="bestil_bord">BESTIL BORD</string>
+    <string name="f_rste_nat">Første nat gratis\n5 camping rabatter\n100+ oplevelser\nMedlem af
+        FDM\nKonkurrencer
+    </string>
+    <string name="v_rsgo">VÆRSGO’</string>
+    <string name="velkommen_ntil_masser_af_nnye_fordele_nog_rabatter">VELKOMMEN\nTIL MASSER AF\nNYE
+        FORDELE\nOG RABATTER
+    </string>
+
 </resources>

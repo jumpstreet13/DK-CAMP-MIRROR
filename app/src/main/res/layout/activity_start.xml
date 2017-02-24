@@ -20,10 +20,11 @@
         android:scaleType="centerCrop"/>
 
     <TextView
-        android:text="  VELKOMMEN\nTIL MASSER AF\n  NYE FORDELE\n OG RABATTER"
+        android:text="@string/velkommen_ntil_masser_af_nnye_fordele_nog_rabatter"
         android:textColor="@color/white"
         android:textStyle="bold|normal"
         android:textSize="@dimen/sizeOfText"
+        android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -45,8 +46,9 @@
     <Button
         style="@style/BlueButtons"
         android:text="@string/start"
-        android:layout_width="139dp"
-        android:layout_height="53dp"
+        android:layout_width="@dimen/WidthOfButtonInActivityStart"
+        android:layout_height="@dimen/HeightOfButtonInActivityStart"
+        android:textSize="@dimen/ButtonTextSizeInStartActivity"
         android:id="@+id/buttonStartInActivityStart"
         android:layout_above="@+id/textView4"
         android:layout_centerHorizontal="true"

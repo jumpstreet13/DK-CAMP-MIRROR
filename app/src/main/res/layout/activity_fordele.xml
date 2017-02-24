@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_fordele"
@@ -24,33 +25,84 @@
         android:layout_below="@+id/toolBarInActivityFordele" android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/background_bil_vogn"
-            android:scaleType="centerCrop"
-            app:riv_corner_radius_top_left="@dimen/cornerRadius"
-            android:layout_weight="1"
-            android:layout_marginBottom="10dp"/>
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/background_bil_vogn"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/background_oplevelser"
-            android:scaleType="centerCrop"
-            app:riv_corner_radius_top_left="@dimen/cornerRadius"
-            android:layout_weight="1"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/roundedImageView3"/>
+            <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
+                style="@style/ButtonsInHowedMenu"
+                android:text="@string/rabatter"
+                app:whereDrawLine="top"
+                android:textStyle="bold|normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp" android:layout_marginStart="36dp"
+                android:id="@+id/button"
+                android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" android:layout_marginBottom="23dp"/>
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/background_bil_vogn"
-            app:riv_corner_radius_top_left="@dimen/cornerRadius"
-            android:scaleType="centerCrop"
-            android:layout_weight="1"
-            android:id="@+id/roundedImageView4"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/background_oplevelser"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius_top_left="@dimen/cornerRadius"
+                android:id="@+id/roundedImageView3"/>
+
+            <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
+                android:text="@string/oplevelser"
+                style="@style/ButtonsInHowedMenu"
+                app:whereDrawLine="top"
+                android:textStyle="bold|normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp" android:layout_marginStart="36dp"
+                android:id="@+id/button3"
+                android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" android:layout_marginBottom="23dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/background_bil_vogn"
+                app:riv_corner_radius_top_left="@dimen/cornerRadius"
+                android:scaleType="centerCrop"
+                android:id="@+id/roundedImageView4"/>
+
+            <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
+                android:text="@string/bil_vogn"
+                style="@style/ButtonsInHowedMenu"
+                app:whereDrawLine="top"
+                android:textStyle="bold|normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp" android:layout_marginStart="36dp"
+                android:id="@+id/button4"
+                android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" android:layout_marginBottom="23dp"/>
+
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 

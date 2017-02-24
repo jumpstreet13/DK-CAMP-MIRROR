@@ -49,6 +49,7 @@
 
         <Button
             style="@style/BlueButtons"
+            android:textSize="@dimen/TextSizesInActivityChoice"
             android:layout_marginBottom="5dp"
             android:text="@string/log_in"
             android:alpha="0.50"
@@ -59,6 +60,7 @@
         <Button
             style="@style/BlueButtons"
             android:text="@string/tilmelding"
+            android:textSize="@dimen/TextSizesInActivityChoice"
             android:alpha="0.50"
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -68,6 +70,7 @@
         <Button
             style="@style/BlueButtons"
             android:text="@string/pladser_t_t_p"
+            android:textSize="@dimen/TextSizesInActivityChoice"
             android:alpha="0.50"
             android:layout_width="match_parent"
             android:layout_height="70dp"

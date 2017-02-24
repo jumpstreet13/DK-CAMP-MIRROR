@@ -25,6 +25,7 @@
         style="@style/BlueButtons"
         android:text="@string/tilmeld"
         android:layout_width="match_parent"
+        android:textSize="@dimen/TextSizeInActivitySignUp"
         android:layout_height="wrap_content"
         android:alpha="0.50"
         android:layout_alignParentBottom="true"
@@ -32,29 +33,37 @@
         android:layout_marginBottom="36dp"
         android:id="@+id/button2" />
 
-    <TextView
-        android:text="VÆRSGO’"
-        android:textSize="45dp"
-        android:textColor="@color/white"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="215dp"
-        android:id="@+id/textView" />
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
-    <TextView
-        android:text="  Første nat gratis\n5 camping rabatter\n   100+ oplevelser\n   Medlem af FDM\n     Konkurrencer"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|normal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:id="@+id/textView5" />
+        <TextView
+            android:text="@string/v_rsgo"
+            android:textSize="@dimen/BigTextSizeInActivitySignUp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" />
 
-    <include layout="@layout/logo_layout"/>
+
+        <TextView
+            android:text="@string/f_rste_nat"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/TextSizeInActivitySignUp"
+            android:textAlignment="center"
+            android:textStyle="bold|normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"/>
+
+    </LinearLayout>
+
+
+    <include layout="@layout/logo_layout" />
 
 </RelativeLayout>
