@@ -22,7 +22,7 @@
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="@dimen/toolBarSize"
         android:id="@+id/toolBarInActivityChoice"
         android:background="@color/white"
         android:layout_alignParentTop="true"

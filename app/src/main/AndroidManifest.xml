@@ -24,7 +24,9 @@
         <activity android:name=".HowedMenuActivity" />
         <activity android:name=".ProfilActivity" />
         <activity android:name=".DigitaltIdActivity" />
-        <activity android:name=".FordeleActivity"></activity>
+        <activity android:name=".FordeleActivity">
+
+        </activity>
     </application>
 
 </manifest>

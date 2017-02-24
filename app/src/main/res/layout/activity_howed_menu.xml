@@ -26,13 +26,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-            <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-                style="@style/ButtonsInHowedMenu"
-                android:text="@string/min_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/buttonMinProfil"
-                android:layout_weight="1"/>
+        <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
+            style="@style/ButtonsInHowedMenu"
+            android:text="@string/min_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonMinProfil"
+            android:layout_weight="1"/>
+
 
         <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
         style="@style/ButtonsInHowedMenu"
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonFordele"
             android:layout_weight="1"/>
+
 
         <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
         style="@style/ButtonsInHowedMenu"
