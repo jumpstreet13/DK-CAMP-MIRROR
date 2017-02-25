@@ -11,13 +11,15 @@ import butterknife.BindView;
 
 public class SpilOgVilActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolBarInActivityOplevelserFirst) Toolbar mToolbar;
+   // @BindView(R.id.toolBarInActivityOplevelserFirst) Toolbar mToolbar;
+
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spil_og_vil);
-        mToolbar = (Toolbar) findViewById(R.id.toolBarInActivityFordele);
+        mToolbar = (Toolbar) findViewById(R.id.toolBarInActivitySpilOgVil);
         mToolbar.setTitle("");
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

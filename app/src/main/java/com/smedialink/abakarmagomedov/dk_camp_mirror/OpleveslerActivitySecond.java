@@ -11,14 +11,15 @@ import butterknife.BindView;
 
 public class OpleveslerActivitySecond extends AppCompatActivity {
 
-    @BindView(R.id.toolBarInActivityOplevelserFirst)
-    Toolbar mToolbar;
+    //@BindView(R.id.toolBarInActivityOplevelserFirst) Toolbar mToolbar;
+
+    private  Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oplevesler_second);
-        mToolbar = (Toolbar) findViewById(R.id.toolBarInActivityFordele);
+        mToolbar = (Toolbar) findViewById(R.id.toolBarInActivityOplevelserSecond);
         mToolbar.setTitle("");
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -12,8 +12,9 @@ import butterknife.BindView;
 
 public class FordeleActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
+    //@BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
 
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

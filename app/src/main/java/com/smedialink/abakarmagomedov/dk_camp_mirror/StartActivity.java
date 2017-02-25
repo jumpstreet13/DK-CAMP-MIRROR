@@ -1,7 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 import android.content.Intent;
-import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

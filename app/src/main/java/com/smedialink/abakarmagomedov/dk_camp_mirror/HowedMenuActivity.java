@@ -25,17 +25,44 @@ public class HowedMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(HowedMenuActivity.this, FordeleActivity.class);
         startActivity(intent);
     }*/
-    private Button mButton;
+    private Button mButtonFordele, mButtonOpleve1, mButtonOpleve2, mButtonSpil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_howed_menu);
-        mButton = (Button) findViewById(R.id.buttonMinProfil);
-        mButton.setOnClickListener(new View.OnClickListener() {
+        mButtonFordele = (Button) findViewById(R.id.buttonMinProfil);
+        mButtonOpleve1 = (Button) findViewById(R.id.buttonCampingId);
+        mButtonOpleve2 = (Button) findViewById(R.id.buttonFordele);
+        mButtonSpil = (Button) findViewById(R.id.buttonTaetPa);
+        mButtonFordele.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HowedMenuActivity.this, FordeleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonOpleve1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HowedMenuActivity.this, OplevelserActivityFirst.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonOpleve2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HowedMenuActivity.this, OpleveslerActivitySecond.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonSpil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HowedMenuActivity.this, SpilOgVilActivity.class);
                 startActivity(intent);
             }
         });

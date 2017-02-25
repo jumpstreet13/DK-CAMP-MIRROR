@@ -23,7 +23,7 @@
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:src="@drawable/background_bil_vogn"
+        android:src="@drawable/background_rabatter"
         android:scaleType="centerCrop"
         android:layout_weight="4"
         app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
