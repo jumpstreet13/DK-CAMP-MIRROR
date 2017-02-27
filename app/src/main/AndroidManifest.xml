@@ -32,13 +32,10 @@
         </activity>
         <activity android:name=".OpleveslerActivitySecond">
         </activity>
-        <activity android:name=".SpilOgVilActivity">
+        <activity android:name=".SpilOgVilActivity"
+                  android:screenOrientation="landscape">
         </activity>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="123456"
-        />
 
     </application>
 

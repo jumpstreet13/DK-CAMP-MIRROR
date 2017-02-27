@@ -1,5 +1,8 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +18,11 @@ public class FordeleActivity extends AppCompatActivity {
     //@BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
 
     private Toolbar mToolbar;
+
+    public static void goTo (Context context){
+        Intent intent = new Intent(context, FordeleActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
