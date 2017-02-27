@@ -44,9 +44,11 @@ public class SpilOgVilActivity extends AppCompatActivity {
     boolean onWebViewTouch(View view, MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_UP:
                 mAppBarLayout.setVisibility(View.GONE);
                 mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                mAppBarLayout.setVisibility(View.VISIBLE);
                 break;
         }
         return false;

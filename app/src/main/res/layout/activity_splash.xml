@@ -26,7 +26,7 @@
 
     <ProgressBar
         android:layout_width="wrap_content"
-        android:indeterminateDrawable="@drawable/customspinner"
+        android:indeterminateDrawable="@drawable/customprogress"
         android:indeterminateOnly="true"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

@@ -41,15 +41,11 @@
     </FrameLayout>
 
     <EditText
+        style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:inputType="textPersonName"
         android:hint="@string/adgangskode"
-        android:background="@drawable/border_for_edittext"
         android:ems="10"
-        android:textColorHint="@color/white"
         android:layout_below="@+id/editText"
         android:layout_marginTop="14dp"
         android:id="@+id/editText2" />
@@ -66,15 +62,12 @@
         android:id="@+id/textView6" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:inputType="textPersonName"
         android:hint="@string/e_mail"
         android:background="@drawable/border_for_edittext"
         android:ems="10"
-        android:textColorHint="@color/white"
         android:layout_marginTop="13dp"
         android:id="@+id/editText"
         android:layout_below="@+id/frameLayout2"

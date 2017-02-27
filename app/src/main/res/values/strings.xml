@@ -47,5 +47,16 @@
     <string name="velkommen_ntil_masser_af_nnye_fordele_nog_rabatter">VELKOMMEN\nTIL MASSER AF\nNYE
         FORDELE\nOG RABATTER
     </string>
+    <string name="upload_nfoto">UPLOAD\nFOTO</string>
+    <string name="navin">NAVIN</string>
+    <string name="adresse">ADRESSE</string>
+    <string name="postnr_by">POSTNR./BY</string>
+    <string name="mobil">MOBIL</string>
+    <string name="e_mailUpper">E-MAIL</string>
+    <string name="f_dselsdag">FØDSELSDAG</string>
+    <string name="familie">FAMILIE</string>
+    <string name="uden_b_rn">UDEN BØRN</string>
+    <string name="single">SINGLE</string>
+    <string name="senior">SENIOR</string>
 
 </resources>
