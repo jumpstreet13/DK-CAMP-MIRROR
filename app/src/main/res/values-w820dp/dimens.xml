@@ -18,10 +18,24 @@
     <dimen name="BigTextSizeInActivitySpilOgVil">40sp</dimen>
     <dimen name="TextSizeInActivitySpilOgVil">24sp</dimen>
     <dimen name="ButtonTextSizeInStartActivity">25sp</dimen>
+    <dimen name="SizeOfTextInActivityProfil">30sp</dimen>
+    <dimen name="text_size_in_activity_log_in">50sp</dimen>
 
     <!--Elements Sizes-->
     <dimen name="toolBarSize">44dp</dimen>
     <dimen name="WidthOfButtonInActivityStart">159dp</dimen>
     <dimen name="HeightOfButtonInActivityStart">73dp</dimen>
+    <dimen name="roundedimageviewSizeInActivityProfil">590dp</dimen>
+    <dimen name="logo_width_in_activity_profil">160dp</dimen>
+    <dimen name="logo_height_in_activity_profil">100dp</dimen>
+    <dimen name="margin_top_in_activity_profil">75dp</dimen>
+    <dimen name="size_of_spinner_in_activity_profil">550dp</dimen>
+    <dimen name="roundedimageview_height_in_activitylog_in">469dp</dimen>
+    <dimen name="button_height_in_activity_log_in">87dp</dimen>
+    <dimen name="logo_width">200dp</dimen>
+    <dimen name="logo_height">190dp</dimen>
+    <dimen name="logo_image_view_width">180dp</dimen>
+    <dimen name="logo_imageview_height">180dp</dimen>
+
 
 </resources>

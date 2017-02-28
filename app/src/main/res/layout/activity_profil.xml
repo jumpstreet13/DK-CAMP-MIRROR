@@ -26,7 +26,7 @@
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imageViewInActivityProfil"
             android:layout_width="match_parent"
-            android:layout_height="390dp"
+            android:layout_height="@dimen/roundedimageviewSizeInActivityProfil"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/toolBarInActivityProfil"
@@ -36,8 +36,8 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/frameLayout"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/logo_width_in_activity_profil"
+            android:layout_height="@dimen/logo_height_in_activity_profil"
             android:layout_below="@+id/toolBarInActivityProfil"
             android:layout_centerHorizontal="true"
             android:background="@color/white"
@@ -55,7 +55,7 @@
             android:paddingBottom="5dp"
             android:text="@string/upload_nfoto"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="@dimen/SizeOfTextInActivityProfil"/>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -76,6 +76,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/navin"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText7"
@@ -86,6 +87,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/adresse"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText6"
@@ -96,6 +98,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/postnr_by"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText5"
@@ -106,6 +109,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/mobil"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText4"
@@ -116,6 +120,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/e_mailUpper"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText3"
@@ -124,19 +129,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="@string/f_dselsdag" android:inputType="textPersonName"/>
+                android:hint="@string/f_dselsdag"
+                android:textSize="@dimen/SizeOfTextInActivityProfil" android:inputType="textPersonName"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_below="@+id/linearLayout"
-            android:layout_centerHorizontal="true" android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true" android:layout_marginTop="@dimen/margin_top_in_activity_profil"
             android:orientation="horizontal">
             <Button
                 android:id="@+id/button7"
                 style="@style/BlueButtons"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -144,7 +150,7 @@
             <Button
                 android:id="@+id/button6"
                 style="@style/BlueButtons"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/uden_b_rn"/>
@@ -160,7 +166,7 @@
             <Button
                 android:id="@+id/button8"
                 style="@style/BlueButtons"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -168,7 +174,7 @@
             <Button
                 android:id="@+id/button9"
                 style="@style/BlueButtons"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/senior"/>
@@ -183,7 +189,7 @@
 
             <Spinner
                 android:id="@+id/spinner2"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
@@ -193,7 +199,7 @@
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/custom_spinner"
@@ -208,6 +214,7 @@
                 android:layout_marginTop="18dp"
                 android:gravity="center"
                 android:text="@string/camping_erfaring"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:textColor="@color/black"/>
 
             <SeekBar
@@ -234,6 +241,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="@string/ingen"
+                    android:textSize="@dimen/SizeOfTextInActivityProfil"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -244,6 +252,7 @@
                     android:layout_weight="1"
                     android:gravity="right"
                     android:text="@string/_40_r"
+                    android:textSize="@dimen/SizeOfTextInActivityProfil"
                     android:textColor="@color/black"/>
             </LinearLayout>
 
@@ -258,7 +267,7 @@
                 android:button="@drawable/custom_checkbox_button"
                 android:paddingLeft="15dp"
                 android:text="@string/ja_tak_send_nyheder_og_tilbud"
-                android:textSize="15sp"/>
+                android:textSize="@dimen/SizeOfTextInActivityProfil"/>
         </LinearLayout>
 
 

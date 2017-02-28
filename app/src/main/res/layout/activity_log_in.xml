@@ -14,7 +14,7 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="match_parent"
-        android:layout_height="239dp"
+        android:layout_height="@dimen/roundedimageview_height_in_activitylog_in"
         android:background="@color/grey"
         app:riv_mutate_background="true"
         android:layout_below="@+id/toolBarInActivityLog"
@@ -42,27 +42,7 @@
 
     <EditText
         style="@style/EditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/adgangskode"
-        android:ems="10"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="14dp"
-        android:id="@+id/editText2" />
-
-    <TextView
-        android:text="@string/glemt_kode"
-        android:textColor="@color/white"
-        android:textStyle="bold|normal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:id="@+id/textView6" />
-
-    <EditText
-        style="@style/EditTextStyle"
+        android:textSize="@dimen/SizeOfTextInActivityProfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/e_mail"
@@ -73,12 +53,36 @@
         android:layout_below="@+id/frameLayout2"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/SizeOfTextInActivityProfil"
+        android:hint="@string/adgangskode"
+        android:ems="10"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="14dp"
+        android:id="@+id/editText2" />
+
+    <TextView
+        android:text="@string/glemt_kode"
+        android:textSize="@dimen/SizeOfTextInActivityProfil"
+        android:textColor="@color/white"
+        android:textStyle="bold|normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/textView6" />
+
+
     <Button
         style="@style/BlueButtons"
         android:text="@string/log_in"
-        android:textSize="25sp"
+        android:textSize="@dimen/text_size_in_activity_log_in"
         android:layout_width="match_parent"
-        android:layout_height="37dp"
+        android:layout_height="@dimen/button_height_in_activity_log_in"
         android:id="@+id/buttonlogInActivityLogiN"
         android:layout_marginTop="4dp"
         android:layout_below="@+id/roundedImageView"

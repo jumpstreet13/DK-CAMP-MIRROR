@@ -23,7 +23,7 @@
     <style name="BlueButtons" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@drawable/blue_button_pressed</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/SizeOfTextInActivityProfil</item>
         <item name="android:textStyle">bold|normal</item>
     </style>
 

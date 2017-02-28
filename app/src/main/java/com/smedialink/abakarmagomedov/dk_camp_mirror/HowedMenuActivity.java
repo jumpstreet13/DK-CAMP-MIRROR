@@ -39,6 +39,10 @@ public class HowedMenuActivity extends AppCompatActivity {
         ProfilActivity.goTo(this);
     }
 
+    @Optional
+    @OnClick(R.id.buttonTaetPa)
+    void onTaetClick() {MinProfilActivity.goTo(this);}
+
 
 
     @Override

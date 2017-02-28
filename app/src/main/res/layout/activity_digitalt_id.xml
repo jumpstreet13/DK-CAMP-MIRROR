@@ -1,13 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_digitalt_id"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.DigitaltIdActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/activity_digitalt_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.DigitaltIdActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBarInActivityDigitaItId"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolBarSize"
+        android:background="@color/white">
+    </android.support.v7.widget.Toolbar>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewInActivityDigitaItId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolBarInActivityDigitaItId"
+        android:background="@color/grey"
+        app:riv_corner_radius_top_left="@dimen/cornerRadius"
+        app:riv_mutate_background="true"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBarInActivityDigitaItId"
+        android:layout_centerHorizontal="true">
+        <include layout="@layout/logo_layout"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/frameLayout" android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:textColor="@color/white"
+            android:text="DK-CAMPING:ID"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView15"/>
+        <TextView
+            android:layout_marginTop="-10dp"
+            android:textColor="@color/white"
+            android:text="FORDELSKLUB"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView14"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/background_rabatter"
+            app:riv_corner_radius_bottom_right="@dimen/cornerRadius"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:text="Bent Hansen"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView16"/>
+        <TextView
+            android:text="Mobil 33 33 33 33"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView17"/>
+        <TextView
+            android:text="bent@hansen.dk"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView18"/>
+        <TextView
+            android:text="MEDLEM NR: 12-456832"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView19"/>
+        <TextView
+            android:text="GYLDIG TIL: 1206-2018"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView20"/>
+    </LinearLayout>
+
+    <TextView
+        android:text="Din digitale legimation til masser af fordele\ni DK-CAMPING:ID Fordelsklubben."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" android:layout_marginBottom="24dp"
+        android:textAlignment="center"
+        android:id="@+id/textView21"/>
+
 
 </RelativeLayout>

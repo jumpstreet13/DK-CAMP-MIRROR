@@ -26,7 +26,7 @@
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imageViewInActivityMinProfil"
             android:layout_width="match_parent"
-            android:layout_height="390dp"
+            android:layout_height="@dimen/roundedimageviewSizeInActivityProfil"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/toolBarInActivityMinProfil"
@@ -36,8 +36,8 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/frameLayout"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/logo_width_in_activity_profil"
+            android:layout_height="@dimen/logo_height_in_activity_profil"
             android:layout_below="@+id/toolBarInActivityMinProfil"
             android:layout_centerHorizontal="true"
             android:background="@color/white"
@@ -58,26 +58,31 @@
             <EditText
                 android:id="@+id/editText8"
                 style="@style/EditTextStyle"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:ems="10"
                 android:hint="@string/navin"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText7"
                 style="@style/EditTextStyle"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:ems="10"
                 android:hint="@string/adresse"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText6"
                 style="@style/EditTextStyle"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -88,29 +93,35 @@
             <EditText
                 android:id="@+id/editText5"
                 style="@style/EditTextStyle"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:ems="10"
                 android:hint="@string/mobil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText4"
                 style="@style/EditTextStyle"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:ems="10"
                 android:hint="@string/e_mailUpper"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText3"
                 style="@style/EditTextStyle"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:ems="10"
                 android:hint="@string/f_dselsdag" android:inputType="textPersonName"/>
         </LinearLayout>
@@ -124,6 +135,7 @@
 
             <Button
                 style="@style/BlueButtons"
+                android:layout_marginTop="5dp"
                 android:text="@string/single"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,7 +145,7 @@
             <Spinner
                 android:id="@+id/spinner2"
                 android:layout_marginTop="10dp"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
@@ -143,7 +155,7 @@
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/custom_spinner"
@@ -158,6 +170,7 @@
                 android:layout_marginTop="18dp"
                 android:gravity="center"
                 android:text="@string/camping_erfaring"
+                android:textSize="@dimen/SizeOfTextInActivityProfil"
                 android:textColor="@color/black"/>
 
             <SeekBar
@@ -184,6 +197,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="@string/ingen"
+                    android:textSize="@dimen/SizeOfTextInActivityProfil"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -193,6 +207,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:textSize="@dimen/SizeOfTextInActivityProfil"
                     android:text="@string/_40_r"
                     android:textColor="@color/black"/>
             </LinearLayout>
