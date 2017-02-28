@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/frameLayout"
+    android:layout_marginTop="20dp" android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/editText8"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/navin"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/editText7"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/adresse"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/editText6"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/postnr_by"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/editText5"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/mobil"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/editText4"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/e_mailUpper"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/editText3"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/f_dselsdag" android:inputType="textPersonName"/>
+</LinearLayout>

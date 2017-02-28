@@ -33,6 +33,13 @@ public class HowedMenuActivity extends AppCompatActivity {
         SpilOgVilActivity.goTo(this);
     }
 
+    @Optional
+    @OnClick(R.id.buttonCampingId)
+    void onCampingClick(){
+        ProfilActivity.goTo(this);
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

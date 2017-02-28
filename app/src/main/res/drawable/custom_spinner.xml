@@ -18,10 +18,10 @@
         </shape>
     </item>
 
-    <item android:gravity="right">
-        <animated-rotate
-            android:drawable="@drawable/ic_arrow_drop_down_black_24dp"/>
+    <item>
+        <bitmap android:src="@drawable/ic_action_name" android:gravity="right"/>
     </item>
+
 
 
 </layer-list>
