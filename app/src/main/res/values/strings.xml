@@ -58,5 +58,9 @@
     <string name="uden_b_rn">UDEN BØRN</string>
     <string name="single">SINGLE</string>
     <string name="senior">SENIOR</string>
+    <string name="camping_erfaring">CAMPING ERFARING</string>
+    <string name="ingen">INGEN</string>
+    <string name="ja_tak_send_nyheder_og_tilbud">Ja tak, send nyheder og tilbud</string>
+    <string name="_40_r">40 ÅR+</string>
 
 </resources>

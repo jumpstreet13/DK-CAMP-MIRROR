@@ -12,7 +12,7 @@
 
     <style name="ButtonsInHowedMenu" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColor">@color/white</item>
-        <item name="android:background">@drawable/howedmenuitempressed</item>
+        <item name="android:background">@drawable/howed_menu_item_pressed</item>
         <item name="android:textSize">@dimen/sizeOfText</item>
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:drawablePadding">20dp</item>
@@ -21,7 +21,7 @@
     </style>
 
     <style name="BlueButtons" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:background">@drawable/bluebuttonpressed</item>
+        <item name="android:background">@drawable/blue_button_pressed</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold|normal</item>
