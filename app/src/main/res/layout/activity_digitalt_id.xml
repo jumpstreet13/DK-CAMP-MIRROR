@@ -38,11 +38,20 @@
         <include layout="@layout/logo_layout"/>
     </FrameLayout>
 
+    <TextView
+        android:text="Din digitale legimation til masser af fordele\ni DK-CAMPING:ID Fordelsklubben."
+        android:textSize="@dimen/SizeOfTextInActivityDigitaItIdSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:id="@+id/textView21"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="13dp"
+        android:gravity="center"
         android:layout_below="@+id/frameLayout" android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -50,24 +59,23 @@
         <TextView
             android:textColor="@color/white"
             android:text="DK-CAMPING:ID"
-            android:textSize="40sp"
+            android:textSize="@dimen/size_of_the_bigger_textview_in_activitydigit"
             android:gravity="center"
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView15"/>
         <TextView
-            android:layout_marginTop="-10dp"
             android:textColor="@color/white"
             android:text="FORDELSKLUB"
-            android:textSize="30sp"
+            android:textSize="@dimen/size_of_the_smallest_textview_in_activity_digitidid"
             android:gravity="center"
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView14"/>
 
         <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_width="wrap_content"
-            android:layout_height="160dp"
+            android:layout_width="@dimen/width_of_image_in_activity_digitait_id"
+            android:layout_height="@dimen/height_of_image_in_activity_digitait_id"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:src="@drawable/background_rabatter"
@@ -76,6 +84,7 @@
 
         <TextView
             android:text="Bent Hansen"
+            android:textSize="@dimen/SizeOfTextInActivityDigitaItId"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:textAlignment="center"
@@ -84,6 +93,7 @@
             android:layout_height="wrap_content" android:id="@+id/textView16"/>
         <TextView
             android:text="Mobil 33 33 33 33"
+            android:textSize="@dimen/SizeOfTextInActivityDigitaItId"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
@@ -92,6 +102,7 @@
             android:layout_height="wrap_content" android:id="@+id/textView17"/>
         <TextView
             android:text="bent@hansen.dk"
+            android:textSize="@dimen/SizeOfTextInActivityDigitaItId"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
@@ -100,6 +111,7 @@
             android:layout_height="wrap_content" android:id="@+id/textView18"/>
         <TextView
             android:text="MEDLEM NR: 12-456832"
+            android:textSize="@dimen/SizeOfTextInActivityDigitaItId"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
@@ -108,6 +120,7 @@
             android:layout_height="wrap_content" android:id="@+id/textView19"/>
         <TextView
             android:text="GYLDIG TIL: 1206-2018"
+            android:textSize="@dimen/SizeOfTextInActivityDigitaItId"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
@@ -115,14 +128,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView20"/>
     </LinearLayout>
-
-    <TextView
-        android:text="Din digitale legimation til masser af fordele\ni DK-CAMPING:ID Fordelsklubben."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" android:layout_marginBottom="24dp"
-        android:textAlignment="center"
-        android:id="@+id/textView21"/>
 
 
 </RelativeLayout>
