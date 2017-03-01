@@ -3,26 +3,27 @@
 
 
     <!--Text sizes-->
-    <dimen name="sizeOfText">50sp</dimen>
-    <dimen name="sizeOfTextBigInOpleveslerActivity">30sp</dimen>
-    <dimen name="sizeOfTextInOpleveslerActivity">24sp</dimen>
+    <dimen name="size_of_text">50sp</dimen>
+    <dimen name="size_of_textBigInOpleveslerActivity">30sp</dimen>
+    <dimen name="size_of_textInOpleveslerActivity">24sp</dimen>
     <dimen name="smallTextActivityStart">20sp</dimen>
-    <dimen name="TextSizesInActivityChoice">24sp</dimen>
-    <dimen name="TextSizeInActivityOpleveslerSecond">24sp</dimen>
-    <dimen name="BigTextSizeInActivityOpleveslerSecond">40sp</dimen>
-    <dimen name="BigTextSizeInActivitySignUp">90sp</dimen>
-    <dimen name="TextSizeInActivitySignUp">40sp</dimen>
-    <dimen name="BigTextSizeInActivitySpilOgVil">40sp</dimen>
-    <dimen name="TextSizeInActivitySpilOgVil">34sp</dimen>
-    <dimen name="ButtonTextSizeInStartActivity">29sp</dimen>
-    <dimen name="SizeOfTextInActivityProfil">30sp</dimen>
-    <dimen name="SizeOfTextInActivityDigitaItId">24sp</dimen>
+    <dimen name="text_sizes_in_activity_choice">44sp</dimen>
+    <dimen name="text_size_in_activity_oplevesler_second">24sp</dimen>
+    <dimen name="big_text_size_in_activity_oplevesler_second">40sp</dimen>
+    <dimen name="bigText_size_in_activity_sign_up">90sp</dimen>
+    <dimen name="text_size_in_activity_sign_up">40sp</dimen>
+    <dimen name="bigText_size_in_activity_spil_og_vil">40sp</dimen>
+    <dimen name="text_size_in_activity_spil_og_vil">34sp</dimen>
+    <dimen name="button_text_size_in_start_activity">29sp</dimen>
+    <dimen name="size_of_text_in_activity_profil">26sp</dimen>
+    <dimen name="size_of_text_in_activity_digitaItIdSmall">25sp</dimen>
+    <dimen name="size_of_text_in_activity_digitaItId">24sp</dimen>
     <dimen name="text_size_in_activity_log_in">50sp</dimen>
 
     <!--Elements Sizes-->
     <dimen name="toolBarSize">44dp</dimen>
-    <dimen name="WidthOfButtonInActivityStart">159dp</dimen>
-    <dimen name="HeightOfButtonInActivityStart">73dp</dimen>
+    <dimen name="width_of_button_in_activity_start">159dp</dimen>
+    <dimen name="height_of_button_in_activity_start">73dp</dimen>
     <dimen name="roundedimageviewSizeInActivityProfil">590dp</dimen>
     <dimen name="logo_width_in_activity_profil">160dp</dimen>
     <dimen name="logo_height_in_activity_profil">100dp</dimen>
@@ -34,10 +35,12 @@
     <dimen name="logo_height">190dp</dimen>
     <dimen name="logo_image_view_width">180dp</dimen>
     <dimen name="logo_imageview_height">180dp</dimen>
-   <!-- <dimen name="height_of_image_in_activity_digitait_id">340dp</dimen>
-    <dimen name="width_of_image_in_activity_digitait_id">340dp</dimen>
-    <dimen name="size_of_the_bigger_textview_in_activitydigit">80sp</dimen>
-    <dimen name="size_of_the_smallest_textview_in_activity_digitidid">60sp</dimen>-->
+    <dimen name="margin_bottom_in_choice_activity">81dp</dimen>
+    <dimen name="height_of_button_in_activity_choice">130dp</dimen>
+    <!-- <dimen name="height_of_image_in_activity_digitait_id">340dp</dimen>
+     <dimen name="width_of_image_in_activity_digitait_id">340dp</dimen>
+     <dimen name="size_of_the_bigger_textview_in_activitydigit">80sp</dimen>
+     <dimen name="size_of_the_smallest_textview_in_activity_digitidid">60sp</dimen>-->
 
 
 </resources>

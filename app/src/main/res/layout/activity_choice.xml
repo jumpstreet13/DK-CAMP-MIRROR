@@ -27,53 +27,50 @@
         android:background="@color/white"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextAppearance="@style/ToolbarTextAppearens"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolBarInActivityChoice"
-        android:layout_centerHorizontal="true">
-        <include layout="@layout/logo_layout"/>
-    </FrameLayout>
+    <include layout="@layout/logo_layout"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
+        android:layout_marginBottom="@dimen/margin_bottom_in_choice_activity"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <Button
             style="@style/BlueButtons"
-            android:textSize="@dimen/TextSizesInActivityChoice"
+            android:textSize="@dimen/text_sizes_in_activity_choice"
             android:layout_marginBottom="5dp"
             android:text="@string/log_in"
             android:alpha="0.50"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="@dimen/height_of_button_in_activity_choice"
             android:id="@+id/buttonlogIn" />
 
         <Button
             style="@style/BlueButtons"
             android:text="@string/tilmelding"
-            android:textSize="@dimen/TextSizesInActivityChoice"
+            android:textSize="@dimen/text_sizes_in_activity_choice"
             android:alpha="0.50"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="@dimen/height_of_button_in_activity_choice"
             android:layout_marginBottom="5dp"
             android:id="@+id/buttontilmelding" />
 
         <Button
             style="@style/BlueButtons"
             android:text="@string/pladser_t_t_p"
-            android:textSize="@dimen/TextSizesInActivityChoice"
+            android:textSize="@dimen/text_sizes_in_activity_choice"
             android:alpha="0.50"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="@dimen/height_of_button_in_activity_choice"
             android:id="@+id/buttonplasder" />
     </LinearLayout>
 

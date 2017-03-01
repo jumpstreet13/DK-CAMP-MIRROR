@@ -10,13 +10,14 @@
             <corners android:topLeftRadius="10dp"/>
             <size android:width="30dp" android:height="30dp"/>
         </shape>-->
+
         <bitmap android:src="@drawable/ic_checkbox_icon" android:gravity="left" >
         </bitmap>
     </item>
 
-    <item>
-
+    <item android:state_checked="false">
     <shape xmlns:android="http://schemas.android.com/apk/res/android">
+     <solid android:color="@android:color/transparent"/>
     <corners android:topLeftRadius="16dp" />
     </shape>
     </item>

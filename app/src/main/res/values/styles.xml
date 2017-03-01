@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -10,10 +10,22 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorSecondary">@color/blue</item>
+        <item name="android:textColorPrimary">@color/blue</item>
+        <item name="actionMenuTextColor">@color/blue</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ToolbarTextAppearens" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
     <style name="ButtonsInHowedMenu" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@drawable/howed_menu_item_pressed</item>
-        <item name="android:textSize">@dimen/sizeOfText</item>
+        <item name="android:textSize">@dimen/size_of_text</item>
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:drawablePadding">20dp</item>
         <item name="android:lineSpacingExtra">-20dp</item>
@@ -23,7 +35,7 @@
     <style name="BlueButtons" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@drawable/blue_button_pressed</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/SizeOfTextInActivityProfil</item>
+        <item name="android:textSize">@dimen/size_of_text_in_activity_profil</item>
         <item name="android:textStyle">bold|normal</item>
     </style>
 

@@ -1,5 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,27 +8,32 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class LogInActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
-    private Button button;
+    @BindView(R.id.toolBarInActivityLog) Toolbar mToolbar;
+
+    @OnClick(R.id.buttonlogInActivityLogiN)
+    void onButtonClick() {
+        HowedMenuActivity.goTo(this);
+    }
+
+    public static void goTo(Context context) {
+        Intent intent = new Intent(context, LogInActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        button = (Button) findViewById(R.id.buttonlogInActivityLogiN);
-        toolbar = (Toolbar) findViewById(R.id.toolBarInActivityLog);
-        toolbar.setTitle("");
-        setSupportActionBar(toolbar);
+        ButterKnife.bind(this);
+        setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LogInActivity.this, HowedMenuActivity.class);
-                startActivity(intent);
-            }
-        });
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 }

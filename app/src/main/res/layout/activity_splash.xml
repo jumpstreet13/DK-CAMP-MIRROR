@@ -37,7 +37,7 @@
         android:text="@string/om_lidt_f_r_ndu_det_hele_n_serveret"
         android:textColor="@color/white"
         android:textStyle="bold|normal"
-        android:textSize="@dimen/sizeOfText"
+        android:textSize="@dimen/size_of_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -45,7 +45,15 @@
         android:layout_below="@+id/progressBar8"
         android:layout_centerHorizontal="true" />
 
-    <include layout="@layout/logo_layout"/>
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundedImageView"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:background="@drawable/rounded_layout"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"/>
 
 
 </RelativeLayout>

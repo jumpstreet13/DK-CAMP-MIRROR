@@ -20,7 +20,11 @@
             android:id="@+id/toolBarInActivityMinProfil"
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolBarSize"
-            android:background="@color/white">
+            android:title=""
+            android:background="@color/white"
+            android:theme="@style/ToolbarTheme"
+            app:titleTextAppearance="@style/ToolbarTextAppearens"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
         </android.support.v7.widget.Toolbar>
 
         <com.makeramen.roundedimageview.RoundedImageView
@@ -58,7 +62,7 @@
             <EditText
                 android:id="@+id/editText8"
                 style="@style/EditTextStyle"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -70,7 +74,7 @@
             <EditText
                 android:id="@+id/editText7"
                 style="@style/EditTextStyle"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -82,7 +86,7 @@
             <EditText
                 android:id="@+id/editText6"
                 style="@style/EditTextStyle"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -93,7 +97,7 @@
             <EditText
                 android:id="@+id/editText5"
                 style="@style/EditTextStyle"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -105,7 +109,7 @@
             <EditText
                 android:id="@+id/editText4"
                 style="@style/EditTextStyle"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -117,7 +121,7 @@
             <EditText
                 android:id="@+id/editText3"
                 style="@style/EditTextStyle"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -170,7 +174,7 @@
                 android:layout_marginTop="18dp"
                 android:gravity="center"
                 android:text="@string/camping_erfaring"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:textColor="@color/black"/>
 
             <SeekBar
@@ -197,7 +201,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="@string/ingen"
-                    android:textSize="@dimen/SizeOfTextInActivityProfil"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -207,7 +211,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:textSize="@dimen/SizeOfTextInActivityProfil"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"
                     android:text="@string/_40_r"
                     android:textColor="@color/black"/>
             </LinearLayout>

@@ -11,30 +11,51 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.LogInActivity">
 
-
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/roundedimageview_height_in_activitylog_in"
-        android:background="@color/grey"
-        app:riv_mutate_background="true"
-        android:layout_below="@+id/toolBarInActivityLog"
-        app:riv_corner_radius_top_left="@dimen/cornerRadius"
-        android:id="@+id/roundedImageView" />
-
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolBarSize"
+        android:title=""
         android:background="@color/white"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/toolBarInActivityLog">
+        android:id="@+id/toolBarInActivityLog"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextAppearance="@style/ToolbarTextAppearens"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/toolBarSize">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/grey"
+            app:riv_mutate_background="true"
+            app:riv_corner_radius_top_left="@dimen/cornerRadius"
+            android:id="@+id/roundedImageView"
+            android:layout_weight="6"/>
+
+        <Button
+            style="@style/BlueButtons"
+            android:text="@string/log_in"
+            android:textSize="@dimen/text_size_in_activity_log_in"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/buttonlogInActivityLogiN"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolBarInActivityLog"
         android:layout_centerHorizontal="true"
         android:id="@+id/frameLayout2">
         <include layout="@layout/logo_layout"/>
@@ -42,7 +63,7 @@
 
     <EditText
         style="@style/EditTextStyle"
-        android:textSize="@dimen/SizeOfTextInActivityProfil"
+        android:textSize="@dimen/size_of_text_in_activity_profil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/e_mail"
@@ -57,7 +78,7 @@
         style="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/SizeOfTextInActivityProfil"
+        android:textSize="@dimen/size_of_text_in_activity_profil"
         android:hint="@string/adgangskode"
         android:ems="10"
         android:layout_below="@+id/editText"
@@ -66,7 +87,7 @@
 
     <TextView
         android:text="@string/glemt_kode"
-        android:textSize="@dimen/SizeOfTextInActivityProfil"
+        android:textSize="@dimen/size_of_text_in_activity_profil"
         android:textColor="@color/white"
         android:textStyle="bold|normal"
         android:layout_width="wrap_content"
@@ -76,18 +97,6 @@
         android:layout_marginTop="17dp"
         android:id="@+id/textView6" />
 
-
-    <Button
-        style="@style/BlueButtons"
-        android:text="@string/log_in"
-        android:textSize="@dimen/text_size_in_activity_log_in"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height_in_activity_log_in"
-        android:id="@+id/buttonlogInActivityLogiN"
-        android:layout_marginTop="4dp"
-        android:layout_below="@+id/roundedImageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

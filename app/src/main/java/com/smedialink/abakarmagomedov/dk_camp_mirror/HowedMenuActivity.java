@@ -1,5 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,8 +24,7 @@ public class HowedMenuActivity extends AppCompatActivity {
 
     @Optional
     @OnClick(R.id.buttonMinProfil)
-    void onProfileClick(){
-        FordeleActivity.goTo(this);
+    void onProfileClick(){MinProfilActivity.goTo(this);
     }
 
     @Optional
@@ -36,12 +36,21 @@ public class HowedMenuActivity extends AppCompatActivity {
     @Optional
     @OnClick(R.id.buttonCampingId)
     void onCampingClick(){
-        ProfilActivity.goTo(this);
+        DigitaltIdActivity.goTo(this);
     }
 
     @Optional
     @OnClick(R.id.buttonTaetPa)
-    void onTaetClick() {MinProfilActivity.goTo(this);}
+    void onTaetClick() {ProfilActivity.goTo(this);}
+
+    @Optional
+    @OnClick(R.id.buttonFordele)
+    void onFordeleClick(){FordeleActivity.goTo(this);}
+
+    public static void goTo(Context context){
+        Intent intent = new Intent(context, HowedMenuActivity.class);
+        context.startActivity(intent);
+    }
 
 
 

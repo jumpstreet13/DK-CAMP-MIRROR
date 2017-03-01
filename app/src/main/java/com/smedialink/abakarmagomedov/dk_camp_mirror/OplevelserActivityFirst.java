@@ -24,6 +24,7 @@ public class OplevelserActivityFirst extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
 
@@ -31,10 +32,16 @@ public class OplevelserActivityFirst extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar_menu, menu);
-        MenuItem item = menu.findItem(R.id.menu);
-        item.setActionView(R.layout.menu_item);
         return true;
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu:
+                ChoiceActivity.goTo(this);
+                return true;
+        }
+        return false;
+    }
 }

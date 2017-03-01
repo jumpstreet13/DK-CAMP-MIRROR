@@ -19,15 +19,41 @@
         </activity>
         <activity android:name=".StartActivity"/>
         <activity android:name=".SignUpActivity"/>
-        <activity android:name=".ChoiceActivity"/>
+
+        <activity android:name=".ChoiceActivity"
+                  android:parentActivityName=".StartActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.smedialink.abakarmagomedov.dk_camp_mirror.StartActivity"/>
+        </activity>
+
         <activity
             android:name=".LogInActivity"
-            android:windowSoftInputMode="adjustResize"/>
+            android:parentActivityName=".ChoiceActivity"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.smedialink.abakarmagomedov.dk_camp_mirror.ChoiceActivity"/>
+        </activity>
+
         <activity android:name=".HowedMenuActivity"/>
         <activity android:name=".ProfilActivity"/>
-        <activity android:name=".DigitaltIdActivity"/>
-        <activity android:name=".FordeleActivity">
+
+        <activity android:name=".DigitaltIdActivity"
+                  android:parentActivityName=".HowedMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity"/>
         </activity>
+
+        <activity android:name=".FordeleActivity"
+                  android:parentActivityName=".HowedMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity"/>
+
+        </activity>
+
         <activity android:name=".OplevelserActivityFirst">
         </activity>
         <activity android:name=".OpleveslerActivitySecond">
@@ -36,7 +62,11 @@
             android:name=".SpilOgVilActivity"
             android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".MinProfilActivity">
+        <activity android:name=".MinProfilActivity"
+                  android:parentActivityName=".HowedMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity"/>
         </activity>
     </application>
 

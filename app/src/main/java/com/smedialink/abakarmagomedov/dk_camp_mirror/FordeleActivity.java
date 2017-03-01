@@ -11,13 +11,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class FordeleActivity extends AppCompatActivity {
 
-    //@BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
+    @BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
 
-    private Toolbar mToolbar;
 
     public static void goTo (Context context){
         Intent intent = new Intent(context, FordeleActivity.class);
@@ -28,19 +28,28 @@ public class FordeleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fordele);
-        mToolbar = (Toolbar) findViewById(R.id.toolBarInActivityFordele);
-        mToolbar.setTitle("");
+        ButterKnife.bind(this);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar_menu, menu);
-        MenuItem item = menu.findItem(R.id.menu);
-        item.setActionView(R.layout.menu_item);
         return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu:
+                ChoiceActivity.goTo(this);
+                return true;
+        }
+        return false;
     }
 }

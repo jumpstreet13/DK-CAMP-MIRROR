@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="SizeOfTextInActivityDigitaItId">9sp</dimen>
-    <dimen name="SizeOfTextInActivityDigitaItIdSmall">9sp</dimen>
+    <dimen name="size_of_text_in_activity_digitaItId">12sp</dimen>
+    <dimen name="sizeof_text_in_activity_digitaItIdSmall">11sp</dimen>
+    <dimen name="size_of_text_in_activity_digitaItIdSmall">12sp</dimen>
+    <dimen name="margin_bottom_in_choice_activity">41dp</dimen>
+    <dimen name="height_of_button_in_activity_choice">40dp</dimen>
 </resources>

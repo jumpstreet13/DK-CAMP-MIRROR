@@ -6,21 +6,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class StartActivity extends AppCompatActivity {
 
-    private Button button;
+    @OnClick(R.id.buttonStartInActivityStart)
+        void onButtonClick(){
+            Intent intent = new Intent(StartActivity.this, ChoiceActivity.class);
+            startActivity(intent);
+        }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        button = (Button) findViewById(R.id.buttonStartInActivityStart);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, ChoiceActivity.class);
-                startActivity(intent);
-            }
-        });
+        ButterKnife.bind(this);
     }
 }

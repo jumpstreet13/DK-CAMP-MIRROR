@@ -18,9 +18,13 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolBarInActivityProfil"
+            android:title=""
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolBarSize"
-            android:background="@color/white">
+            android:background="@color/white"
+            android:theme="@style/ToolbarTheme"
+            app:titleTextAppearance="@style/ToolbarTextAppearens"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
         </android.support.v7.widget.Toolbar>
 
         <com.makeramen.roundedimageview.RoundedImageView
@@ -55,7 +59,7 @@
             android:paddingBottom="5dp"
             android:text="@string/upload_nfoto"
             android:textColor="@color/black"
-            android:textSize="@dimen/SizeOfTextInActivityProfil"/>
+            android:textSize="@dimen/size_of_text_in_activity_profil"/>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -76,7 +80,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/navin"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText7"
@@ -87,7 +91,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/adresse"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText6"
@@ -98,7 +102,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/postnr_by"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText5"
@@ -109,7 +113,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/mobil"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText4"
@@ -120,7 +124,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/e_mailUpper"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:inputType="textPersonName"/>
             <EditText
                 android:id="@+id/editText3"
@@ -130,7 +134,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/f_dselsdag"
-                android:textSize="@dimen/SizeOfTextInActivityProfil" android:inputType="textPersonName"/>
+                android:textSize="@dimen/size_of_text_in_activity_profil" android:inputType="textPersonName"/>
         </LinearLayout>
 
         <LinearLayout
@@ -214,7 +218,7 @@
                 android:layout_marginTop="18dp"
                 android:gravity="center"
                 android:text="@string/camping_erfaring"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"
+                android:textSize="@dimen/size_of_text_in_activity_profil"
                 android:textColor="@color/black"/>
 
             <SeekBar
@@ -241,7 +245,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="@string/ingen"
-                    android:textSize="@dimen/SizeOfTextInActivityProfil"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -252,7 +256,7 @@
                     android:layout_weight="1"
                     android:gravity="right"
                     android:text="@string/_40_r"
-                    android:textSize="@dimen/SizeOfTextInActivityProfil"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"
                     android:textColor="@color/black"/>
             </LinearLayout>
 
@@ -267,7 +271,7 @@
                 android:button="@drawable/custom_checkbox_button"
                 android:paddingLeft="15dp"
                 android:text="@string/ja_tak_send_nyheder_og_tilbud"
-                android:textSize="@dimen/SizeOfTextInActivityProfil"/>
+                android:textSize="@dimen/size_of_text_in_activity_profil"/>
         </LinearLayout>
 
 

@@ -17,7 +17,11 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolBarSize"
         android:id="@+id/toolBarInActivityOplevelserSecond"
-        android:background="@color/white">
+        android:title=""
+        android:background="@color/white"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextAppearance="@style/ToolbarTextAppearens"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
 
     <com.makeramen.roundedimageview.RoundedImageView
@@ -33,7 +37,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.57"
         android:text="@string/spar_25_p_menuen"
-        android:textSize="@dimen/BigTextSizeInActivityOpleveslerSecond"
+        android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"
         android:gravity="center_vertical|center_horizontal"
         android:textColor="@color/black"/>
 
@@ -42,7 +46,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:textAlignment="center"
-        android:textSize="@dimen/TextSizeInActivityOpleveslerSecond"
+        android:textSize="@dimen/text_size_in_activity_oplevesler_second"
         android:textColor="@color/black"
         android:text="@string/ria_sus_dolore"/>
 
@@ -52,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/button5"
-        android:textSize="@dimen/BigTextSizeInActivityOpleveslerSecond"
+        android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"
         android:layout_weight="0.72"/>
 
 

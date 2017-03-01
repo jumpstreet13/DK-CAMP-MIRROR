@@ -11,21 +11,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.SignUpActivity">
 
+
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background_sign_up"
         app:riv_corner_radius_top_left="@dimen/cornerRadius"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolBarInActivitySignUp"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBarInActivitySignUp"
+        android:title=""
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolBarSize"
+        android:background="@color/white"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextAppearance="@style/ToolbarTextAppearens"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </android.support.v7.widget.Toolbar>
 
     <Button
         style="@style/BlueButtons"
         android:text="@string/tilmeld"
         android:layout_width="match_parent"
-        android:textSize="@dimen/TextSizeInActivitySignUp"
+        android:textSize="@dimen/text_size_in_activity_sign_up"
         android:layout_height="wrap_content"
         android:alpha="0.50"
         android:layout_alignParentBottom="true"
@@ -42,7 +54,7 @@
 
         <TextView
             android:text="@string/v_rsgo"
-            android:textSize="@dimen/BigTextSizeInActivitySignUp"
+            android:textSize="@dimen/big_text_size_in_activity_sign_up"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +66,7 @@
             android:textColor="@color/white"
             android:gravity="center"
             android:layout_marginLeft="10dp"
-            android:textSize="@dimen/TextSizeInActivitySignUp"
+            android:textSize="@dimen/text_size_in_activity_sign_up"
             android:textAlignment="center"
             android:textStyle="bold|normal"
             android:layout_width="wrap_content"
@@ -64,6 +76,6 @@
     </LinearLayout>
 
 
-    <include layout="@layout/logo_layout" />
+    <include layout="@layout/logo_layout"/>
 
 </RelativeLayout>

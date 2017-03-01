@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:layout_width="@dimen/logo_width"
-        android:layout_height="@dimen/logo_height"
-        android:background="@color/white"
-        app:riv_mutate_background="true"
-        android:scaleType="fitCenter"
-        app:riv_corner_radius_bottom_right="@dimen/cornerRadius"
-        app:riv_corner_radius_bottom_left="@dimen/cornerRadius"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/roundedImageView2" />
 
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="@dimen/logo_image_view_width"
-        android:layout_height="@dimen/logo_imageview_height"
-        android:src="@drawable/logo"
-        android:layout_alignBottom="@+id/roundedImageView2"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/appCompatImageView" />
-
-</RelativeLayout>
+<com.makeramen.roundedimageview.RoundedImageView
+    android:id="@+id/roundedImageView"
+    android:layout_width="@dimen/logo_width"
+    android:layout_height="@dimen/logo_height"
+    android:background="@drawable/rounded_layout"
+    android:padding="20dp"
+    android:scaleType="fitCenter"
+    android:src="@drawable/logo" xmlns:android="http://schemas.android.com/apk/res/android"/>
