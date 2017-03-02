@@ -13,7 +13,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     @BindView(R.id.toolBarInActivitySignUp) Toolbar mToolbar;
 
-    public static void goTo(Context context){
+    public static void start(Context context){
         Intent intent = new Intent(context, SignUpActivity.class);
         context.startActivity(intent);
     }

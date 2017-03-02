@@ -28,6 +28,7 @@
 
         <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
             style="@style/ButtonsInHowedMenu"
+            android:background="@drawable/howed_menu_item_pressed_rounded"
             android:text="@string/min_profil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

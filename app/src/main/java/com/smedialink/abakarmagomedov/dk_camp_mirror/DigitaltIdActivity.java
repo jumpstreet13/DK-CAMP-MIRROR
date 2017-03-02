@@ -17,7 +17,7 @@ public class DigitaltIdActivity extends AppCompatActivity {
     @BindView(R.id.toolBarInActivityDigitaItId) Toolbar mToolbar;
 
 
-    public static void goTo(Context context){
+    public static void start(Context context){
         Intent intent = new Intent(context, DigitaltIdActivity.class);
         context.startActivity(intent);
     }
@@ -44,7 +44,7 @@ public class DigitaltIdActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu:
-                ChoiceActivity.goTo(this);
+                ChoiceActivity.start(this);
                 return true;
         }
         return false;

@@ -2,34 +2,23 @@ package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.network.MyWebViewClient;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.OnTouch;
-import butterknife.Optional;
 
 public class SpilOgVilActivity extends AppCompatActivity {
 
@@ -114,7 +103,7 @@ public class SpilOgVilActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu:
-                ChoiceActivity.goTo(this);
+                ChoiceActivity.start(this);
                 return true;
         }
         return false;

@@ -16,7 +16,7 @@ public class MinProfilActivity extends AppCompatActivity {
 
     @BindView(R.id.toolBarInActivityMinProfil) Toolbar mToolbar;
 
-    public static void goTo(Context context){
+    public static void start(Context context){
         Intent intent = new Intent(context, MinProfilActivity.class);
         context.startActivity(intent);
     }
@@ -43,7 +43,7 @@ public class MinProfilActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.log_ud:
-                LogInActivity.goTo(this);
+                LogInActivity.start(this);
                 return true;
         }
         return false;

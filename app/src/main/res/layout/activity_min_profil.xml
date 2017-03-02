@@ -1,230 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_min_profil"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBarInActivityMinProfil"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.MinProfilActivity">
+        android:layout_height="@dimen/toolBarSize"
+        android:background="@color/white"
+        android:theme="@style/ToolbarTheme"
+        android:title=""
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolbarTextAppearens">
+    </android.support.v7.widget.Toolbar>
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolBarInActivityMinProfil"
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_min_profil"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/toolBarSize"
-            android:title=""
-            android:background="@color/white"
-            android:theme="@style/ToolbarTheme"
-            app:titleTextAppearance="@style/ToolbarTextAppearens"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        </android.support.v7.widget.Toolbar>
+            android:layout_height="match_parent"
+            tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.MinProfilActivity">
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/imageViewInActivityMinProfil"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/roundedimageviewSizeInActivityProfil"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/toolBarInActivityMinProfil"
-            android:background="@color/grey"
-            app:riv_corner_radius_top_left="@dimen/cornerRadius"
-            app:riv_mutate_background="true"/>
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/frameLayout"
-            android:layout_width="@dimen/logo_width_in_activity_profil"
-            android:layout_height="@dimen/logo_height_in_activity_profil"
-            android:layout_below="@+id/toolBarInActivityMinProfil"
-            android:layout_centerHorizontal="true"
-            android:background="@color/white"
-            app:riv_corner_radius_bottom_right="@dimen/cornerRadius"
-            app:riv_mutate_background="true">
-        </com.makeramen.roundedimageview.RoundedImageView>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageViewInActivityMinProfil"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/roundedimageviewSizeInActivityProfil"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/grey"
+                app:riv_corner_radius_top_left="@dimen/cornerRadius"
+                app:riv_mutate_background="true"/>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/frameLayout"
-            android:layout_marginTop="20dp" android:orientation="vertical"
-            xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/frameLayout"
+                android:layout_width="@dimen/logo_width_in_activity_profil"
+                android:layout_height="@dimen/logo_height_in_activity_profil"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                app:riv_corner_radius_bottom_right="@dimen/cornerRadius"
+                app:riv_mutate_background="true">
+            </com.makeramen.roundedimageview.RoundedImageView>
 
-            <EditText
-                android:id="@+id/editText8"
-                style="@style/EditTextStyle"
-                android:textSize="@dimen/size_of_text_in_activity_profil"
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:ems="10"
-                android:hint="@string/navin"
-                android:inputType="textPersonName"/>
-            <EditText
-                android:id="@+id/editText7"
-                style="@style/EditTextStyle"
-                android:textSize="@dimen/size_of_text_in_activity_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:ems="10"
-                android:hint="@string/adresse"
-                android:inputType="textPersonName"/>
-            <EditText
-                android:id="@+id/editText6"
-                style="@style/EditTextStyle"
-                android:textSize="@dimen/size_of_text_in_activity_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="@string/postnr_by"
-                android:inputType="textPersonName"/>
-            <EditText
-                android:id="@+id/editText5"
-                style="@style/EditTextStyle"
-                android:textSize="@dimen/size_of_text_in_activity_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:ems="10"
-                android:hint="@string/mobil"
-                android:inputType="textPersonName"/>
-            <EditText
-                android:id="@+id/editText4"
-                style="@style/EditTextStyle"
-                android:textSize="@dimen/size_of_text_in_activity_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:ems="10"
-                android:hint="@string/e_mailUpper"
-                android:inputType="textPersonName"/>
-            <EditText
-                android:id="@+id/editText3"
-                style="@style/EditTextStyle"
-                android:textSize="@dimen/size_of_text_in_activity_profil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:ems="10"
-                android:hint="@string/f_dselsdag" android:inputType="textPersonName"/>
-        </LinearLayout>
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/frameLayout" android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/imageViewInActivityMinProfil"
-            android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
-
-            <Button
-                style="@style/BlueButtons"
-                android:layout_marginTop="5dp"
-                android:text="@string/single"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/button11"/>
-
-
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_marginTop="10dp"
-                android:layout_width="@dimen/size_of_spinner_in_activity_profil"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/custom_spinner"
-                android:spinnerMode="dialog"
-                android:textAlignment="center"/>
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="@dimen/size_of_spinner_in_activity_profil"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/custom_spinner"
-                android:spinnerMode="dialog"
-                android:textAlignment="center"/>
-
-            <TextView
-                android:id="@+id/editText9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="18dp"
-                android:gravity="center"
-                android:text="@string/camping_erfaring"
-                android:textSize="@dimen/size_of_text_in_activity_profil"
-                android:textColor="@color/black"/>
-
-            <SeekBar
-                android:id="@+id/seekBar2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:max="10"
-                android:maxHeight="3dp"
-                android:progress="5"
-                android:progressDrawable="@drawable/custom_seekbar"
-                android:thumb="@drawable/thumb_custom_seek_bar"/>
+                <EditText
+                    android:id="@+id/editText8"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/navin"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"/>
+                <EditText
+                    android:id="@+id/editText7"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/adresse"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"/>
+                <EditText
+                    android:id="@+id/editText6"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/postnr_by"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"/>
+                <EditText
+                    android:id="@+id/editText5"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/mobil"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"/>
+                <EditText
+                    android:id="@+id/editText4"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/e_mailUpper"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"/>
+                <EditText
+                    android:id="@+id/editText3"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/f_dselsdag"
+                    android:inputType="textPersonName" android:textSize="@dimen/size_of_text_in_activity_profil"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/imageViewInActivityMinProfil" android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button11"
+                    style="@style/BlueButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/single"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="@dimen/size_of_spinner_in_activity_profil"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_spinner"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center"/>
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="@dimen/size_of_spinner_in_activity_profil"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_spinner"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center"/>
 
                 <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/editText9"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_weight="1"
-                    android:text="@string/ingen"
-                    android:textSize="@dimen/size_of_text_in_activity_profil"
-                    android:textColor="@color/black"/>
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="@string/camping_erfaring"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_of_text_in_activity_profil"/>
 
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
+                <SeekBar
+                    android:id="@+id/seekBar2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:textSize="@dimen/size_of_text_in_activity_profil"
-                    android:text="@string/_40_r"
-                    android:textColor="@color/black"/>
+                    android:layout_gravity="center"
+                    android:max="10"
+                    android:maxHeight="3dp"
+                    android:progress="5"
+                    android:progressDrawable="@drawable/custom_seekbar"
+                    android:thumb="@drawable/thumb_custom_seek_bar"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:text="@string/ingen"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_of_text_in_activity_profil"/>
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/_40_r"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_of_text_in_activity_profil"/>
+                </LinearLayout>
+
+                <Button
+                    style="@style/BlueButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/ndringer"/>
+
             </LinearLayout>
 
-            <Button
-                style="@style/BlueButtons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/ndringer"/>
 
-        </LinearLayout>
-
-
-    </RelativeLayout>
-</android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

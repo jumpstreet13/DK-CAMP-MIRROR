@@ -45,15 +45,12 @@
         android:layout_below="@+id/progressBar8"
         android:layout_centerHorizontal="true" />
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/roundedImageView"
-        android:layout_width="@dimen/logo_width"
-        android:layout_height="@dimen/logo_height"
-        android:background="@drawable/rounded_layout"
-        android:scaleType="fitCenter"
-        android:padding="10dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo"/>
+    <include android:id="@+id/logo"
+             layout="@layout/logo_layout"
+             android:layout_width="@dimen/logo_width"
+             android:layout_height="@dimen/logo_height"
+             android:layout_centerHorizontal="true"
+             android:layout_alignParentTop="true"/>
 
 
 </RelativeLayout>

@@ -25,6 +25,7 @@
     </android.support.v7.widget.Toolbar>
 
     <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageviewInActivityOpleveslerSecond"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:src="@drawable/background_rabatter"
@@ -33,6 +34,7 @@
         app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
     <TextView
+        android:id="@+id/bigTextViewInActivityOpleveslerSecond"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.57"
@@ -42,6 +44,7 @@
         android:textColor="@color/black"/>
 
     <TextView
+        android:id="@+id/smallTextViewInActivityOpleveslerSecond"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

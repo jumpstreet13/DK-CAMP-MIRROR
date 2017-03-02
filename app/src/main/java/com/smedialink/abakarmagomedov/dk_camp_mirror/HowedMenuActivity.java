@@ -2,18 +2,9 @@ package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ContentFrameLayout;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.UnderlineSpan;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Optional;
@@ -24,7 +15,7 @@ public class HowedMenuActivity extends AppCompatActivity {
 
     @Optional
     @OnClick(R.id.buttonMinProfil)
-    void onProfileClick(){MinProfilActivity.goTo(this);
+    void onProfileClick(){MinProfilActivity.start(this);
     }
 
     @Optional
@@ -36,16 +27,16 @@ public class HowedMenuActivity extends AppCompatActivity {
     @Optional
     @OnClick(R.id.buttonCampingId)
     void onCampingClick(){
-        DigitaltIdActivity.goTo(this);
+        DigitaltIdActivity.start(this);
     }
 
     @Optional
     @OnClick(R.id.buttonTaetPa)
-    void onTaetClick() {ProfilActivity.goTo(this);}
+    void onTaetClick() {ProfilActivity.start(this);}
 
     @Optional
     @OnClick(R.id.buttonFordele)
-    void onFordeleClick(){FordeleActivity.goTo(this);}
+    void onFordeleClick(){FordeleActivity.start(this);}
 
     public static void goTo(Context context){
         Intent intent = new Intent(context, HowedMenuActivity.class);

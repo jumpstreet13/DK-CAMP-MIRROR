@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_fordele"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,99 +12,133 @@
     tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.FordeleActivity">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBarInActivityFordele"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolBarSize"
-        android:id="@+id/toolBarInActivityFordele"
         android:theme="@style/ToolbarTheme"
-        app:titleTextAppearance="@style/ToolbarTextAppearens"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolbarTextAppearens">
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/toolBarInActivityFordele"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolBarInActivityFordele"
+        android:orientation="vertical">
 
         <RelativeLayout android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1">
+
             <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/rabatterImageViewInActivityFordele"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/background_bil_vogn"
+                android:background="@drawable/howed_menu_item_pressed"
+                android:clickable="false"
                 android:scaleType="centerCrop"
+                android:src="@drawable/background_bil_vogn"
                 app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
             <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-                style="@style/ButtonsInHowedMenu"
-                android:text="@string/rabatter"
-                app:whereDrawLine="top"
-                android:textStyle="bold|normal"
+                android:id="@+id/rabbater"
+                style="@style/ButtonsInFordele"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="36dp" android:layout_marginStart="36dp"
-                android:id="@+id/button"
-                android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" android:layout_marginBottom="23dp"/>
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/rabatter"
+                android:textStyle="bold|normal"
+                app:whereDrawLine="top"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_foreground_imageview_selector"/>
 
         </RelativeLayout>
 
         <RelativeLayout android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1">
+
+
             <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/opleveslerImageViewInActivityFordele"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/background_oplevelser"
+                android:clickable="false"
                 android:scaleType="centerCrop"
-                app:riv_corner_radius_top_left="@dimen/cornerRadius"
-                android:id="@+id/roundedImageView3"/>
+                android:src="@drawable/background_oplevelser"
+                app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
             <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-                android:text="@string/oplevelser"
-                style="@style/ButtonsInHowedMenu"
-                app:whereDrawLine="top"
-                android:textStyle="bold|normal"
+                android:id="@+id/oplevesler"
+                style="@style/ButtonsInFordele"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp" android:layout_marginStart="36dp"
-                android:id="@+id/button3"
-                android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" android:layout_marginBottom="23dp"/>
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp" android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                android:clickable="false"
+                android:text="@string/oplevelser"
+                android:textStyle="bold|normal"
+                app:whereDrawLine="top"/>
+
+
+            <Button
+                android:id="@+id/opleveslerImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_foreground_imageview_selector"/>
 
         </RelativeLayout>
+
 
         <RelativeLayout android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1">
 
             <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/bilvognImageViewInActivityFordele"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/background_bil_vogn"
-                app:riv_corner_radius_top_left="@dimen/cornerRadius"
+                android:clickable="false"
+                android:drawSelectorOnTop="true"
                 android:scaleType="centerCrop"
-                android:id="@+id/roundedImageView4"/>
+                android:src="@drawable/background_bil_vogn"
+                app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
             <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-                android:text="@string/bil_vogn"
-                style="@style/ButtonsInHowedMenu"
-                app:whereDrawLine="top"
-                android:textStyle="bold|normal"
+                android:id="@+id/bilvogn"
+                style="@style/ButtonsInFordele"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp" android:layout_marginStart="36dp"
-                android:id="@+id/button4"
-                android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" android:layout_marginBottom="23dp"/>
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp" android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                android:clickable="false"
+                android:text="@string/bil_vogn"
+                android:textStyle="bold|normal"
+                app:whereDrawLine="top"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_foreground_imageview_selector"/>
+
 
         </RelativeLayout>
-
 
 
     </LinearLayout>

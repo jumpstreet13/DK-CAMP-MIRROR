@@ -19,7 +19,7 @@ public class ProfilActivity extends AppCompatActivity {
     @BindView(R.id.toolBarInActivityProfil) Toolbar mToolbar;
 
 
-    public static void goTo(Context context){
+    public static void start(Context context){
         Intent intent = new Intent(context, ProfilActivity.class);
         context.startActivity(intent);
     }

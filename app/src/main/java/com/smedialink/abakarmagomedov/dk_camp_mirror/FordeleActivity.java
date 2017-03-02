@@ -1,6 +1,5 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,15 +11,21 @@ import android.view.MenuItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class FordeleActivity extends AppCompatActivity {
 
     @BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
 
+    @OnClick(R.id.opleveslerImageButton)
+    void onOpleveslerClick() {
+        OplevelserActivityFirst.start(this);
+    }
 
-    public static void goTo (Context context){
-        Intent intent = new Intent(context, FordeleActivity.class);
+
+    public static void start(Context context) {
+        Intent intent = new  Intent(context, FordeleActivity.class);
         context.startActivity(intent);
     }
 
@@ -45,9 +50,9 @@ public class FordeleActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu:
-                ChoiceActivity.goTo(this);
+                ChoiceActivity.start(this);
                 return true;
         }
         return false;

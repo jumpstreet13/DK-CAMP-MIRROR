@@ -34,7 +34,7 @@
     <dimen name="toolBarSize">22dp</dimen>
     <dimen name="width_of_button_in_activity_start">139dp</dimen>
     <dimen name="height_of_button_in_activity_start">53dp</dimen>
-    <dimen name="roundedimageviewSizeInActivityProfil">390dp</dimen>
+    <dimen name="roundedimageviewSizeInActivityProfil">400dp</dimen>
     <dimen name="logo_width_in_activity_profil">80dp</dimen>
     <dimen name="logo_height_in_activity_profil">50dp</dimen>
     <dimen name="margin_top_in_activity_profil">25dp</dimen>

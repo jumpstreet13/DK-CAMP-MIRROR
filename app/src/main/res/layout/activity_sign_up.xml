@@ -76,6 +76,11 @@
     </LinearLayout>
 
 
-    <include layout="@layout/logo_layout"/>
+    <include android:id="@+id/logo"
+             layout="@layout/logo_layout"
+             android:layout_below="@+id/toolBarInActivitySignUp"
+             android:layout_width="@dimen/logo_width"
+             android:layout_height="@dimen/logo_height"
+             android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -33,7 +33,12 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
 
-    <include layout="@layout/logo_layout"/>
+    <include android:id="@+id/logo"
+             layout="@layout/logo_layout"
+             android:layout_below="@+id/toolBarInActivityChoice"
+             android:layout_width="@dimen/logo_width"
+             android:layout_height="@dimen/logo_height"
+             android:layout_centerHorizontal="true"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -49,7 +54,7 @@
             android:textSize="@dimen/text_sizes_in_activity_choice"
             android:layout_marginBottom="5dp"
             android:text="@string/log_in"
-            android:alpha="0.50"
+            android:alpha="0.70"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_of_button_in_activity_choice"
             android:id="@+id/buttonlogIn" />
@@ -58,7 +63,7 @@
             style="@style/BlueButtons"
             android:text="@string/tilmelding"
             android:textSize="@dimen/text_sizes_in_activity_choice"
-            android:alpha="0.50"
+            android:alpha="0.70"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_of_button_in_activity_choice"
             android:layout_marginBottom="5dp"
@@ -68,7 +73,7 @@
             style="@style/BlueButtons"
             android:text="@string/pladser_t_t_p"
             android:textSize="@dimen/text_sizes_in_activity_choice"
-            android:alpha="0.50"
+            android:alpha="0.70"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_of_button_in_activity_choice"
             android:id="@+id/buttonplasder" />

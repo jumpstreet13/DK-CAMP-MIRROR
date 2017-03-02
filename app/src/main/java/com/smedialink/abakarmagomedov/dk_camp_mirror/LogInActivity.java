@@ -21,7 +21,7 @@ public class LogInActivity extends AppCompatActivity {
         HowedMenuActivity.goTo(this);
     }
 
-    public static void goTo(Context context) {
+    public static void start(Context context) {
         Intent intent = new Intent(context, LogInActivity.class);
         context.startActivity(intent);
     }
