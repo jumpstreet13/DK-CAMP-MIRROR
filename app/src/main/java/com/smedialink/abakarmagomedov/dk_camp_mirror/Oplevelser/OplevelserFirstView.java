@@ -1,4 +1,4 @@
-package com.smedialink.abakarmagomedov.dk_camp_mirror;
+package com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser;
 
 
 

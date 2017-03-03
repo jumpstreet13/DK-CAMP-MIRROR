@@ -9,8 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.makeramen.roundedimageview.RoundedImageView;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.OplevelserActivityFirst;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.OplevelserFirstView;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserFirstView;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 
 import java.util.List;
@@ -25,9 +24,9 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
     private OplevelserFirstView mOpleListener;
 
 
-    public OpleveslerAdapter(List<OpleveslerItem> listItems, @NonNull OplevelserFirstView opleListener){
+    public OpleveslerAdapter(List<OpleveslerItem> listItems, @NonNull OplevelserFirstView opleListener) {
         this.listItems = listItems;
-         mOpleListener = opleListener;
+        mOpleListener = opleListener;
     }
 
     @Override
@@ -48,7 +47,7 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
         return listItems.size();
     }
 
-    static class OpleveslerActivityHolder extends RecyclerView.ViewHolder{
+    static class OpleveslerActivityHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.bigTextViewInActivityOpleveslerSecond) TextView bigText;
         @BindView(R.id.smallTextViewInActivityOpleveslerSecond) TextView smallText;
@@ -57,7 +56,7 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
         private OplevelserFirstView mOpleListener;
 
         @OnClick(R.id.linelayInOpleveslerList)
-        void onImageClick(){
+        void onImageClick() {
             mOpleListener.invoke();
             mItem.setFocused(true);
         }
@@ -67,7 +66,7 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
             ButterKnife.bind(this, itemView);
         }
 
-        void bindView(OpleveslerItem item, @NonNull OplevelserFirstView opleListener){
+        void bindView(OpleveslerItem item, @NonNull OplevelserFirstView opleListener) {
             mOpleListener = opleListener;
             bigText.setText(item.getBigText());
             smallText.setText(item.getSmallText());
@@ -75,7 +74,6 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
             mItem = item;
         }
     }
-
 
 
 }

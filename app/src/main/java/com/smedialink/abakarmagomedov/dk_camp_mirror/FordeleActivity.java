@@ -1,13 +1,12 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityFirst;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.smedialink.abakarmagomedov.dk_camp_mirror;
+package com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser;
 
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
@@ -11,20 +11,19 @@ public class OplevelserActivityFirstPresenter implements OplevelserActivityPrese
     private final WeakReference<OplevelserFirstView> oplevelserFirstView;
     private final OplevelserActivityInteractor oplevelserActivityInteractor;
 
-
     public OplevelserActivityFirstPresenter(OplevelserFirstView oplevelserFirstView, OplevelserActivityInteractor interactor) {
         this.oplevelserFirstView = new WeakReference<>(oplevelserFirstView);
         this.oplevelserActivityInteractor = interactor;
     }
 
-    public void invoke(){
+    public void invoke() {
         OplevelserFirstView view = oplevelserFirstView.get();
         if (view != null) {
             view.start();
         }
     }
 
-    public List<OpleveslerItem> getFakeData(){
+    public List<OpleveslerItem> getFakeData() {
         return oplevelserActivityInteractor.getFakeData();
     }
 

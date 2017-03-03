@@ -16,13 +16,13 @@ public class HowedMenuActivity extends BaseActivity {
     @Optional
     @OnClick(R.id.buttonMinProfil)
     void onProfileClick(){
-        start(this, MinProfilActivity.class);
+        start(MinProfilActivity.class);
     }
 
     @Optional
     @OnClick(R.id.buttonSpilOgVind)
     void onSpilClick(){
-        start(SpilOgVilActivity.class);
+        start(SpilOgVilActivity.class,"http://ec2-52-11-181-117.us-west-2.compute.amazonaws.com/bingo/index.html");
     }
 
     @Optional

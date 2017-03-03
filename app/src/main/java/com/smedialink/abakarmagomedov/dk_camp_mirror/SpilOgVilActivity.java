@@ -1,5 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
@@ -12,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.network.MyWebViewClient;
@@ -20,14 +22,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTouch;
 
+@SuppressLint("SetJavaScriptEnabled")
 public class SpilOgVilActivity extends BaseActivity {
 
     @BindView(R.id.toolBarInActivitySpilOgVil) Toolbar mToolbar;
     @BindView(R.id.bottomSheetInActivitySpilOg) View bottomSheet;
     @BindView(R.id.webViewInActivitySpilOgVil) WebView mWebView;
     @BindView(R.id.appBarInSpilOgVilActivity) AppBarLayout mAppBarLayout;
-    //@BindView(R.id.progressBarInActivitySpilOg) ProgressBar mProgressBar;
-
 
     @OnTouch(R.id.webViewInActivitySpilOgVil)
     boolean onWebViewTouch(View view, MotionEvent event) {
@@ -45,8 +46,6 @@ public class SpilOgVilActivity extends BaseActivity {
 
     private BottomSheetBehavior mBottomSheetBehavior;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +53,7 @@ public class SpilOgVilActivity extends BaseActivity {
         ButterKnife.bind(this);
         setToolbar(mToolbar);
         mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
-        mWebView.loadUrl("http://ec2-52-11-181-117.us-west-2.compute.amazonaws.com/bingo/index.html");
+        mWebView.loadUrl(getIntent().getStringExtra(IntentUtils.WEB));
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new MyWebViewClient());
     }
@@ -93,9 +92,9 @@ public class SpilOgVilActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu:
-                start(this, HowedMenuActivity.class);
+                start(HowedMenuActivity.class);
                 return true;
         }
         return false;

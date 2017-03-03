@@ -54,7 +54,7 @@
 
         </activity>
 
-        <activity android:name=".OplevelserActivityFirst"
+        <activity android:name=".Oplevelser.OplevelserActivityFirst"
                   android:parentActivityName=".FordeleActivity">
 
             <meta-data
@@ -62,7 +62,7 @@
                 android:value=".FordeleActivity"/>
         </activity>
         <activity android:name=".OpleveslerActivitySecond"
-                  android:parentActivityName=".OplevelserActivityFirst">
+                  android:parentActivityName=".Oplevelser.OplevelserActivityFirst">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".OpleveslerActivitySecond"/>

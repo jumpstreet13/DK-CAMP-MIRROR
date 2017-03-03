@@ -1,4 +1,4 @@
-package com.smedialink.abakarmagomedov.dk_camp_mirror;
+package com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser;
 
 import android.os.Bundle;
 
@@ -8,15 +8,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.OpleveslerActivitySecond;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Home;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerAdapter;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.RunnableFuture;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,8 +22,8 @@ import butterknife.ButterKnife;
 
 public class OplevelserActivityFirst extends BaseActivity implements OplevelserFirstView {
 
-   @BindView(R.id.toolBarInActivityOplevelserFirst)  Toolbar mToolbar;
-   @BindView(R.id.recyclerViewInActivityOplevesler) RecyclerView mRecyclerView;
+    @BindView(R.id.toolBarInActivityOplevelserFirst) Toolbar mToolbar;
+    @BindView(R.id.recyclerViewInActivityOplevesler) RecyclerView mRecyclerView;
 
     private OplevelserActivityFirstPresenter mPresenter;
 
@@ -58,14 +56,13 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu:
                 start(HowedMenuActivity.class);
                 return true;
         }
         return false;
     }
-
 
 
     @Override
