@@ -10,39 +10,36 @@ import butterknife.OnClick;
 import butterknife.Optional;
 
 
-public class HowedMenuActivity extends AppCompatActivity {
+public class HowedMenuActivity extends BaseActivity {
 
 
     @Optional
     @OnClick(R.id.buttonMinProfil)
-    void onProfileClick(){MinProfilActivity.start(this);
+    void onProfileClick(){
+        start(this, MinProfilActivity.class);
     }
 
     @Optional
     @OnClick(R.id.buttonSpilOgVind)
     void onSpilClick(){
-        SpilOgVilActivity.goTo(this);
+        start(SpilOgVilActivity.class);
     }
 
     @Optional
     @OnClick(R.id.buttonCampingId)
     void onCampingClick(){
-        DigitaltIdActivity.start(this);
+        start(DigitaltIdActivity.class);
     }
 
     @Optional
     @OnClick(R.id.buttonTaetPa)
-    void onTaetClick() {ProfilActivity.start(this);}
+    void onTaetClick() {
+        start(ProfilActivity.class);
+    }
 
     @Optional
     @OnClick(R.id.buttonFordele)
-    void onFordeleClick(){FordeleActivity.start(this);}
-
-    public static void goTo(Context context){
-        Intent intent = new Intent(context, HowedMenuActivity.class);
-        context.startActivity(intent);
-    }
-
+    void onFordeleClick(){start(FordeleActivity.class);}
 
 
     @Override

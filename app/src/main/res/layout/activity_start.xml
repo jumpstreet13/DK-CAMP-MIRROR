@@ -25,6 +25,7 @@
         android:textStyle="bold|normal"
         android:textSize="@dimen/size_of_text"
         android:textAlignment="center"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

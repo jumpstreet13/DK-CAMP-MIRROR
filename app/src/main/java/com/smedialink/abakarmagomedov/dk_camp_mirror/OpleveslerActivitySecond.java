@@ -16,18 +16,14 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class OpleveslerActivitySecond extends AppCompatActivity {
+public class OpleveslerActivitySecond extends BaseActivity{
 
     @BindView(R.id.toolBarInActivityOplevelserSecond) Toolbar mToolbar;
     @BindView(R.id.imageviewInActivityOpleveslerSecond) ImageView mImageView;
     @BindView(R.id.bigTextViewInActivityOpleveslerSecond) TextView bigText;
     @BindView(R.id.smallTextViewInActivityOpleveslerSecond) TextView smallText;
-
-    public static void start(Context context){
-        Intent intent = new Intent(context, OpleveslerActivitySecond.class);
-        context.startActivity(intent);
-    }
 
 
     @Override
@@ -35,15 +31,10 @@ public class OpleveslerActivitySecond extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oplevesler_second);
         ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setToolbar(mToolbar);
         Home home = Home.getInstanse();
         setViews(home.getFocusedItem());
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,7 +47,7 @@ public class OpleveslerActivitySecond extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu:
-                ChoiceActivity.start(this);
+                start(HowedMenuActivity.class);
                 return true;
         }
         return false;

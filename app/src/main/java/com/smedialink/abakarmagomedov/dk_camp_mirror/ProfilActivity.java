@@ -14,25 +14,18 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ProfilActivity extends AppCompatActivity {
+public class ProfilActivity extends BaseActivity{
 
     @BindView(R.id.toolBarInActivityProfil) Toolbar mToolbar;
 
 
-    public static void start(Context context){
-        Intent intent = new Intent(context, ProfilActivity.class);
-        context.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
         ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setToolbar(mToolbar);
     }
 
     @Override

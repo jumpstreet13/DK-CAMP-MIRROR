@@ -12,28 +12,21 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class LogInActivity extends AppCompatActivity {
+public class LogInActivity extends BaseActivity {
 
     @BindView(R.id.toolBarInActivityLog) Toolbar mToolbar;
 
     @OnClick(R.id.buttonlogInActivityLogiN)
     void onButtonClick() {
-        HowedMenuActivity.goTo(this);
+        start(HowedMenuActivity.class);
     }
 
-    public static void start(Context context) {
-        Intent intent = new Intent(context, LogInActivity.class);
-        context.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setToolbar(mToolbar);
     }
 }

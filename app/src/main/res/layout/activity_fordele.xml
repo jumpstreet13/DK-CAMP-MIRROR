@@ -28,10 +28,11 @@
         android:layout_below="@+id/toolBarInActivityFordele"
         android:orientation="vertical">
 
-        <RelativeLayout android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/rabatterImageViewInActivityFordele"
@@ -65,11 +66,11 @@
 
         </RelativeLayout>
 
-        <RelativeLayout android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_weight="1">
-
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/opleveslerImageViewInActivityFordele"

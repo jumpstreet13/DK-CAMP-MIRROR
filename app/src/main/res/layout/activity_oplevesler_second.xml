@@ -30,14 +30,13 @@
         android:layout_height="0dp"
         android:src="@drawable/background_rabatter"
         android:scaleType="centerCrop"
-        android:layout_weight="3.5"
+        android:layout_weight="1"
         app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
     <TextView
         android:id="@+id/bigTextViewInActivityOpleveslerSecond"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.57"
+        android:layout_height="wrap_content"
         android:text="@string/spar_25_p_menuen"
         android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"
         android:gravity="center_vertical|center_horizontal"
@@ -46,10 +45,10 @@
     <TextView
         android:id="@+id/smallTextViewInActivityOpleveslerSecond"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="@dimen/text_size_in_activity_oplevesler_second"
+        android:gravity="center"
         android:textColor="@color/black"
         android:text="@string/ria_sus_dolore"/>
 
@@ -57,10 +56,8 @@
         style="@style/BlueButtons"
         android:text="@string/bestil_bord"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/height_of_button_in_activity_start"
         android:id="@+id/button5"
-        android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"
-        android:layout_weight="0.72"/>
-
+        android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"/>
 
 </LinearLayout>

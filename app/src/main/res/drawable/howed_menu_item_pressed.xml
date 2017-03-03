@@ -5,7 +5,6 @@
         <shape>
             <solid xmlns:android="http://schemas.android.com/apk/res/android"
                 android:color="#88000000"/>
-            <corners android:topLeftRadius="@dimen/cornerRadius"/>
         </shape>
     </item>
 

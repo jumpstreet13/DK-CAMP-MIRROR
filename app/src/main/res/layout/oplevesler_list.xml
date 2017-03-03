@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:id="@+id/justLin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_of_elements_in_recycler_view">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/image_oplevesler_activity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:src="@drawable/background_bil_vogn"
+            android:scaleType="centerCrop"
+            android:clickable="false"
+            app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
+
+    <TextView
+        android:text="@string/jensens_b_fhus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:textSize="@dimen/size_of_text_big_in_oplevesler_activity"
+        android:textStyle="bold|normal"
+        android:gravity="center_horizontal|center_vertical"
+        android:id="@+id/bigTextViewInActivityOpleveslerSecond"
+        android:layout_weight="0.70"/>
+
+    <TextView
+        android:text="@string/ria_sus_dolorest_eratibu_stiatur_aut_ad_nquae_nonsequae_corit_et_quatis_ad_quinda_si_bl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center|top"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_of_text_in_oplevesler_activity"
+        android:id="@+id/smallTextViewInActivityOpleveslerSecond"/>
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/linelayInOpleveslerList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_of_elements_in_recycler_view"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_foreground_imageview_selector"/>
+
+</RelativeLayout>

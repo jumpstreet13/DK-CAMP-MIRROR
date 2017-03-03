@@ -152,7 +152,6 @@
                     android:layout_marginTop="5dp"
                     android:text="@string/single"/>
 
-
                 <Spinner
                     android:id="@+id/spinner2"
                     android:layout_width="@dimen/size_of_spinner_in_activity_profil"

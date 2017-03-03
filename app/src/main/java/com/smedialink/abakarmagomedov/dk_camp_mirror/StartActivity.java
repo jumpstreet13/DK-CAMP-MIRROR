@@ -10,15 +10,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class StartActivity extends AppCompatActivity {
-
-    @OnClick(R.id.buttonStartInActivityStart)
-        void onButtonClick(){
-            Intent intent = new Intent(StartActivity.this, ChoiceActivity.class);
-            startActivity(intent);
-        }
-
-
+public class StartActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,4 +18,10 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
         ButterKnife.bind(this);
     }
+
+    @OnClick(R.id.buttonStartInActivityStart)
+    void onButtonClick(){
+        start(ChoiceActivity.class);
+    }
+
 }

@@ -54,14 +54,24 @@
 
         </activity>
 
-        <activity android:name=".OplevelserActivityFirst">
+        <activity android:name=".OplevelserActivityFirst"
+                  android:parentActivityName=".FordeleActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FordeleActivity"/>
         </activity>
-        <activity android:name=".OpleveslerActivitySecond">
+        <activity android:name=".OpleveslerActivitySecond"
+                  android:parentActivityName=".OplevelserActivityFirst">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OpleveslerActivitySecond"/>
+
         </activity>
         <activity
             android:name=".SpilOgVilActivity"
-            android:screenOrientation="landscape"
-            android:parentActivityName=".HowedMenuActivity">
+            android:parentActivityName=".HowedMenuActivity"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity"/>

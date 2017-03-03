@@ -14,31 +14,23 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class FordeleActivity extends AppCompatActivity {
+public class FordeleActivity extends BaseActivity{
 
     @BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
 
     @OnClick(R.id.opleveslerImageButton)
-    void onOpleveslerClick() {
-        OplevelserActivityFirst.start(this);
-    }
+    void onOpleveslerClick() {start(OplevelserActivityFirst.class);}
 
 
-    public static void start(Context context) {
-        Intent intent = new  Intent(context, FordeleActivity.class);
-        context.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fordele);
         ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setToolbar(mToolbar);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -52,7 +44,7 @@ public class FordeleActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu:
-                ChoiceActivity.start(this);
+                start(HowedMenuActivity.class);
                 return true;
         }
         return false;

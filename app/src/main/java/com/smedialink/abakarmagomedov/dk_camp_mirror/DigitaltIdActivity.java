@@ -12,25 +12,18 @@ import android.view.MenuItem;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DigitaltIdActivity extends AppCompatActivity {
+public class DigitaltIdActivity extends BaseActivity {
 
     @BindView(R.id.toolBarInActivityDigitaItId) Toolbar mToolbar;
 
 
-    public static void start(Context context){
-        Intent intent = new Intent(context, DigitaltIdActivity.class);
-        context.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_digitalt_id);
         ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setToolbar(mToolbar);
     }
 
     @Override
@@ -44,7 +37,7 @@ public class DigitaltIdActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu:
-                ChoiceActivity.start(this);
+                start(HowedMenuActivity.class);
                 return true;
         }
         return false;

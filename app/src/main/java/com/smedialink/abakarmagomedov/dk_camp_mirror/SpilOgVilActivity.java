@@ -20,7 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTouch;
 
-public class SpilOgVilActivity extends AppCompatActivity {
+public class SpilOgVilActivity extends BaseActivity {
 
     @BindView(R.id.toolBarInActivitySpilOgVil) Toolbar mToolbar;
     @BindView(R.id.bottomSheetInActivitySpilOg) View bottomSheet;
@@ -46,21 +46,13 @@ public class SpilOgVilActivity extends AppCompatActivity {
     private BottomSheetBehavior mBottomSheetBehavior;
 
 
-    public static void goTo(Context context) {
-        Intent intent = new Intent(context, SpilOgVilActivity.class);
-        context.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spil_og_vil);
         ButterKnife.bind(this);
-        mToolbar.setTitle("");
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setToolbar(mToolbar);
         mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
         mWebView.loadUrl("http://ec2-52-11-181-117.us-west-2.compute.amazonaws.com/bingo/index.html");
         mWebView.getSettings().setJavaScriptEnabled(true);
@@ -103,7 +95,7 @@ public class SpilOgVilActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu:
-                ChoiceActivity.start(this);
+                start(this, HowedMenuActivity.class);
                 return true;
         }
         return false;

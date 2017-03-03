@@ -49,6 +49,7 @@
     <dimen name="width_of_image_in_activity_digitait_id">200dp</dimen>
     <dimen name="margin_bottom_in_choice_activity">41dp</dimen>
     <dimen name="height_of_button_in_activity_choice">70dp</dimen>
+    <dimen name="size_of_elements_in_recycler_view">270dp</dimen>
 
 
 </resources>

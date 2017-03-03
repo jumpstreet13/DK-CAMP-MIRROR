@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.LoginFilter;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,24 +13,17 @@ import android.view.MenuItem;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MinProfilActivity extends AppCompatActivity {
+public class MinProfilActivity extends BaseActivity{
 
     @BindView(R.id.toolBarInActivityMinProfil) Toolbar mToolbar;
 
-    public static void start(Context context){
-        Intent intent = new Intent(context, MinProfilActivity.class);
-        context.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_min_profil);
         ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setToolbar(mToolbar);
     }
 
     @Override
@@ -43,7 +37,7 @@ public class MinProfilActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.log_ud:
-                LogInActivity.start(this);
+                start(LogInActivity.class);
                 return true;
         }
         return false;

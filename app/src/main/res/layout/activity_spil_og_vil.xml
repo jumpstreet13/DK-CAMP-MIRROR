@@ -9,7 +9,6 @@
     android:orientation="vertical"
     tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.SpilOgVilActivity">
 
-
     <WebView
         android:id="@+id/webViewInActivitySpilOgVil"
         android:layout_width="match_parent"

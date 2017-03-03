@@ -4,6 +4,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -31,7 +32,6 @@
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/activity_digitalt_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="DK-CAMPING:ID"
+                    tools:text="DK-CAMPING:ID"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size_of_the_bigger_textview_in_activitydigit"/>
@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="FORDELSKLUB"
+                    tools:text="FORDELSKLUB"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size_of_the_smallest_textview_in_activity_digitidid"/>
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:text="Bent Hansen"
+                    tools:text="Bent Hansen"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="Mobil 33 33 33 33"
+                    tools:text="Mobil 33 33 33 33"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
@@ -114,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="bent@hansen.dk"
+                    tools:text="bent@hansen.dk"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="MEDLEM NR: 12-456832"
+                    tools:text="MEDLEM NR: 12-456832"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="GYLDIG TIL: 1206-2018"
+                    tools:text="GYLDIG TIL: 1206-2018"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
@@ -154,11 +154,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                android:gravity="bottom"
-                android:text="Din digitale legimation til masser af fordele\ni DK-CAMPING:ID Fordelsklubben."
+                android:gravity="bottom|center"
+                tools:text="Din digitale legimation til masser af fordele\ni DK-CAMPING:ID Fordelsklubben."
                 android:textAlignment="center"
                 android:textSize="@dimen/size_of_text_in_activity_digitaItIdSmall"/>
-
 
         </LinearLayout>
     </ScrollView>

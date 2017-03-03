@@ -45,7 +45,7 @@ public class CustomButton extends Button {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int length = 350;
+        int length = (int) (getTextSize() * 3);
         if(!isBottom) {canvas.drawLine(getPaddingLeft(), this.getMeasuredHeight()*0.1f, length,this.getMeasuredHeight()*0.1f,paint);}
         if(isBottom) {canvas.drawLine(getPaddingLeft(), this.getMeasuredHeight()/1.4f, length,this.getMeasuredHeight()/1.4f,paint);}
     }
