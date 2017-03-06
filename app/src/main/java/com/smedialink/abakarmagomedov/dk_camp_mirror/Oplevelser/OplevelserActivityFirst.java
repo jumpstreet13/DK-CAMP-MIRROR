@@ -9,24 +9,27 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.OpleveslerActivitySecond;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Home;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerAdapter;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.InteractorModule;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
 
+import java.util.List;
+
+import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
 public class OplevelserActivityFirst extends BaseActivity implements OplevelserFirstView {
 
+    @Inject OplevelserActivityPresenter mPresenter;
     @BindView(R.id.toolBarInActivityOplevelserFirst) Toolbar mToolbar;
     @BindView(R.id.recyclerViewInActivityOplevesler) RecyclerView mRecyclerView;
-
-    private OplevelserActivityFirstPresenter mPresenter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +37,11 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
         setContentView(R.layout.activity_oplevelser_first);
         ButterKnife.bind(this);
         setToolbar(mToolbar);
-        mPresenter = new OplevelserActivityFirstPresenter(this, new OplevelserActivityFirstInteractor());
-        Home home = Home.getInstanse();
-        home.setItems(mPresenter.getFakeData());
-        OpleveslerAdapter adapter = new OpleveslerAdapter(home.getItems(), this);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(adapter);
+
+        App.get().getAppComponent().plusOplevelserComponent(new PresenterModule(this)).inject(this);
+        mPresenter.fetchData();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,18 +62,35 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
 
 
     @Override
-    public void invoke() {
+    public void onItemClick() {
         mPresenter.invoke();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Runtime.getRuntime().gc();
     }
 
     @Override
     public void start() {
         start(OpleveslerActivitySecond.class);
     }
+
+    @Override
+    public void success() {
+
+    }
+
+    @Override
+    public void error() {
+
+    }
+
+    @Override
+    public void show(List<OpleveslerItem> items) {
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        OpleveslerAdapter adapter = new OpleveslerAdapter(items, this);
+        mRecyclerView.setAdapter(adapter);
+    }
+
 }

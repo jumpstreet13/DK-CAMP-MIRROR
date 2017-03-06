@@ -7,9 +7,13 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import dagger.Module;
+import dagger.Provides;
+
 public class OplevelserActivityFirstInteractor implements OplevelserActivityInteractor {
+
     @Override
-    public List<OpleveslerItem> getFakeData() {
+    public List<OpleveslerItem> getFakeData(OnFinishedListener listener) {
         OpleveslerItem opleveslerItem = new OpleveslerItem("JENSENS BØFHUS",
                 "Ria sus dolorest eratibu stiatur aut ad quae nonsequae corit et quatis ad quinda si bl", R.drawable.background_bil_vogn);
         OpleveslerItem opleveslerItem2 = new OpleveslerItem("FÅRUP SOMMERLAND",
@@ -19,6 +23,7 @@ public class OplevelserActivityFirstInteractor implements OplevelserActivityInte
         arrayList.add(opleveslerItem);
         arrayList.add(opleveslerItem2);
         arrayList.add(opleveslerItem3);
+        listener.onSuccess();
         return arrayList;
     }
 }

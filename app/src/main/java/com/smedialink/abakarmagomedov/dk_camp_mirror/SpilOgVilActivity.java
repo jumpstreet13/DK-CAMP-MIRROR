@@ -1,11 +1,8 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomSheetBehavior;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -13,10 +10,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.network.MyWebViewClient;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.IntentUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -67,15 +64,6 @@ public class SpilOgVilActivity extends BaseActivity {
                 mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
             }
         });
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (mWebView.canGoBack()) {
-            mWebView.goBack();
-        } else {
-            super.onBackPressed();
-        }
     }
 
     @Override

@@ -7,5 +7,11 @@ import java.util.List;
 
 public interface OplevelserActivityInteractor {
 
-    List<OpleveslerItem> getFakeData();
+    List<OpleveslerItem> getFakeData(final OnFinishedListener listener);
+
+    interface OnFinishedListener {
+        void onError();
+        void onSuccess();
+    }
+
 }

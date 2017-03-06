@@ -57,7 +57,7 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
 
         @OnClick(R.id.linelayInOpleveslerList)
         void onImageClick() {
-            mOpleListener.invoke();
+            mOpleListener.onItemClick();
             mItem.setFocused(true);
         }
 
