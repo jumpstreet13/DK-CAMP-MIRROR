@@ -1,29 +1,50 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser;
 
 
+import android.util.Log;
+
+import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Discount;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Discounts;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.network.ApiDiscountService;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.network.ApiDkService;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.network.ServiceGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dagger.Module;
-import dagger.Provides;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class OplevelserActivityFirstInteractor implements OplevelserActivityInteractor {
 
+    private static Retrofit.Builder sBuilder = new Retrofit.Builder().baseUrl(ApiDiscountService.BASE_URL);
+
+
+
     @Override
-    public List<OpleveslerItem> getFakeData(OnFinishedListener listener) {
-        OpleveslerItem opleveslerItem = new OpleveslerItem("JENSENS BØFHUS",
-                "Ria sus dolorest eratibu stiatur aut ad quae nonsequae corit et quatis ad quinda si bl", R.drawable.background_bil_vogn);
-        OpleveslerItem opleveslerItem2 = new OpleveslerItem("FÅRUP SOMMERLAND",
-                "Ria sus dolorest eratibad quae nonsequae corit et quat omnis ad qui audanda si bl", R.drawable.background_rabatter);
-        OpleveslerItem opleveslerItem3 = new OpleveslerItem("BIG TEXT", "some small text about another things", R.drawable.background_log_in);
-        ArrayList<OpleveslerItem> arrayList = new ArrayList<>();
-        arrayList.add(opleveslerItem);
-        arrayList.add(opleveslerItem2);
-        arrayList.add(opleveslerItem3);
-        listener.onSuccess();
-        return arrayList;
+    public void fetchOplevelsers(final OnFinishedListener listener) {
+        Call<Discounts> call = ServiceGenerator.createService(ApiDiscountService.class, sBuilder).getOplevelser();
+        call.enqueue(new Callback<Discounts>() {
+            @Override
+            public void onResponse(Call<Discounts> call, Response<Discounts> response) {
+                Log.d("TAG", "success");
+                for(Discount discount : response.body().getData()){
+                    discount.setDetails(App.parseHtml(discount.getDetails()));
+                    discount.setTitle(App.parseHtml(discount.getTitle()));
+                }
+                listener.onSuccess(response.body().getData());
+            }
+
+            @Override
+            public void onFailure(Call<Discounts> call, Throwable t) {
+              listener.onError();
+            }
+        });
+
     }
 }

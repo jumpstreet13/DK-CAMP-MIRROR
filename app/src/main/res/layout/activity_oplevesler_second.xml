@@ -1,63 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
+    android:id="@+id/activity_oplevesler_top"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_oplevesler_second"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBarInActivityOplevelserSecond"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolBarSize"
+        android:background="@color/white"
+        android:theme="@style/ToolbarTheme"
+        android:title=""
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolbarTextAppearens">
+    </android.support.v7.widget.Toolbar>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_oplevesler_second"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.OpleveslerActivitySecond">
+    tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerActivitySecond">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolBarSize"
-        android:id="@+id/toolBarInActivityOplevelserSecond"
-        android:title=""
-        android:background="@color/white"
-        android:theme="@style/ToolbarTheme"
-        app:titleTextAppearance="@style/ToolbarTextAppearens"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-    </android.support.v7.widget.Toolbar>
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imageviewInActivityOpleveslerSecond"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/background_rabatter"
+        android:layout_height="@dimen/size_of_elements_in_recycler_view"
         android:scaleType="centerCrop"
-        android:layout_weight="1"
+        android:src="@drawable/background_rabatter"
         app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
-    <TextView
-        android:id="@+id/bigTextViewInActivityOpleveslerSecond"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/spar_25_p_menuen"
-        android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"
-        android:gravity="center_vertical|center_horizontal"
-        android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/smallTextViewInActivityOpleveslerSecond"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="@dimen/text_size_in_activity_oplevesler_second"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:text="@string/ria_sus_dolore"/>
+            <TextView
+                android:id="@+id/bigTextViewInActivityOpleveslerSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/spar_25_p_menuen"
+                android:textColor="@color/black"
+                android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"/>
 
-    <Button
-        style="@style/BlueButtons"
-        android:text="@string/bestil_bord"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_of_button_in_activity_start"
-        android:id="@+id/button5"
-        android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"/>
+            <TextView
+                android:id="@+id/smallTextViewInActivityOpleveslerSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:layout_weight="1"
+                android:text="@string/ria_sus_dolore"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_in_activity_oplevesler_second"/>
 
+            <Button
+                android:id="@+id/button5"
+                style="@style/BlueButtons"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_of_button_in_activity_start"
+                android:layout_marginTop="10dp"
+                android:text="@string/bestil_bord"
+                android:textSize="@dimen/big_text_size_in_activity_oplevesler_second"/>
+
+        </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
 </LinearLayout>

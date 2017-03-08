@@ -11,7 +11,7 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LogInActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MinProfilActivity extends BaseActivity{
+public class MinProfilActivity extends BaseActivity {
 
     @BindView(R.id.toolBarInActivityMinProfil) Toolbar mToolbar;
 
@@ -33,7 +33,7 @@ public class MinProfilActivity extends BaseActivity{
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.log_ud:
                 start(LogInActivity.class);
                 return true;

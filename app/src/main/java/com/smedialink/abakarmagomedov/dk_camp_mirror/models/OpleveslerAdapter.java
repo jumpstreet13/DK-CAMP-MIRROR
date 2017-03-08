@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserFirstView;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
@@ -20,11 +21,11 @@ import butterknife.OnClick;
 
 public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.OpleveslerActivityHolder> {
 
-    private List<OpleveslerItem> listItems;
+    private List<Discount> listItems;
     private OplevelserFirstView mOpleListener;
 
 
-    public OpleveslerAdapter(List<OpleveslerItem> listItems, @NonNull OplevelserFirstView opleListener) {
+    public OpleveslerAdapter(List<Discount> listItems, @NonNull OplevelserFirstView opleListener) {
         this.listItems = listItems;
         mOpleListener = opleListener;
     }
@@ -38,7 +39,7 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
 
     @Override
     public void onBindViewHolder(OpleveslerActivityHolder holder, int position) {
-        OpleveslerItem item = listItems.get(position);
+        Discount item = listItems.get(position);
         holder.bindView(item, mOpleListener);
     }
 
@@ -52,13 +53,14 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
         @BindView(R.id.bigTextViewInActivityOpleveslerSecond) TextView bigText;
         @BindView(R.id.smallTextViewInActivityOpleveslerSecond) TextView smallText;
         @BindView(R.id.image_oplevesler_activity) RoundedImageView mRoundedImageView;
-        private OpleveslerItem mItem;
+        private Discount mItem;
         private OplevelserFirstView mOpleListener;
 
         @OnClick(R.id.linelayInOpleveslerList)
         void onImageClick() {
             mOpleListener.onItemClick();
-            mItem.setFocused(true);
+            Home home = Home.getInstanse();
+            home.setFocusedItem(mItem);
         }
 
         OpleveslerActivityHolder(View itemView) {
@@ -66,11 +68,13 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
             ButterKnife.bind(this, itemView);
         }
 
-        void bindView(OpleveslerItem item, @NonNull OplevelserFirstView opleListener) {
+        void bindView(Discount item, @NonNull OplevelserFirstView opleListener) {
             mOpleListener = opleListener;
-            bigText.setText(item.getBigText());
-            smallText.setText(item.getSmallText());
-            mRoundedImageView.setImageResource(item.getImage());
+            bigText.setText(item.getTitle());
+            smallText.setText(item.getDetails().substring(0, 83));
+            Glide.with(mRoundedImageView.getContext())
+                    .load(item.getImageUrl())
+                    .into(mRoundedImageView);
             mItem = item;
         }
     }

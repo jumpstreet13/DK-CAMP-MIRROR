@@ -3,13 +3,11 @@ package com.smedialink.abakarmagomedov.dk_camp_mirror.models;
 
 
 public class OpleveslerItem {
-    private boolean focused;
     private String bigText;
     private String smallText;
     private int image;
 
     public OpleveslerItem(String bigText, String smallText, int image) {
-        focused = false;
         this.bigText = bigText;
         this.smallText = smallText;
         this.image = image;
@@ -39,11 +37,4 @@ public class OpleveslerItem {
         this.image = image;
     }
 
-    public void setFocused(boolean focused){
-        this.focused = focused;
-    }
-
-    public boolean getFocused(){
-        return focused;
-    }
 }

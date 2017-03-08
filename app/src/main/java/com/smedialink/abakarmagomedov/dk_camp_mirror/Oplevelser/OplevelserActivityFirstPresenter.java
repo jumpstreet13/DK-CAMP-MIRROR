@@ -1,19 +1,20 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser;
 
 
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Home;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerAdapter;
+import android.support.annotation.NonNull;
+
+import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Discount;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
 
 import java.lang.ref.WeakReference;
-
-import javax.inject.Inject;
+import java.util.List;
 
 public class OplevelserActivityFirstPresenter implements OplevelserActivityPresenter, OplevelserActivityInteractor.OnFinishedListener {
 
     private final WeakReference<OplevelserFirstView> oplevelserFirstView;
-    private final OplevelserActivityInteractor oplevelserActivityInteractor;
+    private OplevelserActivityInteractor oplevelserActivityInteractor;
 
-    @Inject
     public OplevelserActivityFirstPresenter(OplevelserFirstView oplevelserFirstView, OplevelserActivityInteractor interactor) {
         this.oplevelserFirstView = new WeakReference<>(oplevelserFirstView);
         this.oplevelserActivityInteractor = interactor;
@@ -30,28 +31,27 @@ public class OplevelserActivityFirstPresenter implements OplevelserActivityPrese
     @Override
     public void fetchData() {
         OplevelserFirstView view = oplevelserFirstView.get();
-        if(view != null) {
-            Home home = Home.getInstanse();
-            home.setItems(oplevelserActivityInteractor.getFakeData(this));
-            view.show(home.getItems());
+        if (view != null) {
+            view.sProgress();
         }
-
+        oplevelserActivityInteractor.fetchOplevelsers(this);
     }
 
     @Override
     public void onError() {
         OplevelserFirstView view = oplevelserFirstView.get();
-        if(view != null){
-            view.success();
+        if (view != null) {
+            view.error();
+            view.hProgress();
         }
     }
 
     @Override
-    public void onSuccess() {
+    public void onSuccess(@NonNull List<Discount> data) {
         OplevelserFirstView view = oplevelserFirstView.get();
-        if(view != null){
-            view.error();
+        if (view != null) {
+            view.show(data);
+            view.hProgress();
         }
-
     }
 }

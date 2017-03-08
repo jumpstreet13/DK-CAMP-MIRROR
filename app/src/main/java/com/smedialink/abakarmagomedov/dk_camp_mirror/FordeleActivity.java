@@ -2,11 +2,13 @@ package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityFirst;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LogInActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,6 +23,13 @@ public class FordeleActivity extends BaseActivity{
     void onOpleveslerClick() {start(OplevelserActivityFirst.class);}
 
 
+    @Override
+    protected void onResume() {
+        super.onPostResume();
+        Log.d("VALIDATE", App.validate() + "");
+        if(App.validate())
+            start(LogInActivity.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

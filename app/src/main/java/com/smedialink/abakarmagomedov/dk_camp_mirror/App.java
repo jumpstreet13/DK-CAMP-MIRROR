@@ -5,17 +5,16 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityFirst;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.AppModule;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.InteractorModule;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.managers.DataManager;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 
 public class App extends Application {
 
     protected static App instance;
     private AppComponent mAppComponent;
-    private OplevelserComponent mOplevelserComponent;
     public static SharedPreferences sSharedPreference;
 
 
@@ -23,8 +22,13 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        mAppComponent = buildComponent();
         sSharedPreference = PreferenceManager.getDefaultSharedPreferences(this);
-        mAppComponent = DaggerAppComponent.builder().build();
+    }
+
+    protected AppComponent buildComponent() {
+        return DaggerAppComponent.builder()
+                .build();
     }
 
 
@@ -38,6 +42,16 @@ public class App extends Application {
 
     public static SharedPreferences getSharedPreference(){
         return sSharedPreference;
+    }
+
+    public static String parseHtml(String parse){
+        Document document = Jsoup.parse(parse);
+        return document.text();
+    }
+
+    public static boolean validate(){
+        DataManager dataManager = DataManager.getInstance();
+        return dataManager.getPreferenceManager().getUserExist().equals("NO");
     }
 
 }

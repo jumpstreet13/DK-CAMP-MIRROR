@@ -1,8 +1,5 @@
-package com.smedialink.abakarmagomedov.dk_camp_mirror;
+package com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -11,19 +8,31 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Home;
+import com.bumptech.glide.Glide;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Discount;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class OpleveslerActivitySecond extends BaseActivity{
+public class OpleveslerActivitySecond extends BaseActivity implements OpleveslerView {
 
     @BindView(R.id.toolBarInActivityOplevelserSecond) Toolbar mToolbar;
     @BindView(R.id.imageviewInActivityOpleveslerSecond) ImageView mImageView;
     @BindView(R.id.bigTextViewInActivityOpleveslerSecond) TextView bigText;
     @BindView(R.id.smallTextViewInActivityOpleveslerSecond) TextView smallText;
+    @Inject OpleveslerPresenter mOplevelserActivityPresenter;
+
 
 
     @Override
@@ -32,8 +41,8 @@ public class OpleveslerActivitySecond extends BaseActivity{
         setContentView(R.layout.activity_oplevesler_second);
         ButterKnife.bind(this);
         setToolbar(mToolbar);
-        Home home = Home.getInstanse();
-        setViews(home.getFocusedItem());
+        App.get().getAppComponent().plusComponent(new PresenterModule(this)).inject(this);
+        mOplevelserActivityPresenter.fetchData();
     }
 
     @Override
@@ -47,17 +56,26 @@ public class OpleveslerActivitySecond extends BaseActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu:
-                start(HowedMenuActivity.class);
+                mOplevelserActivityPresenter.start();
                 return true;
         }
         return false;
     }
 
-    public void setViews(OpleveslerItem item){
-        mImageView.setImageResource(item.getImage());
-        bigText.setText(item.getBigText());
-        smallText.setText(item.getSmallText());
-        item.setFocused(false);
+    @Override
+    public void setViews(Discount item){
+        bigText.setText(item.getTitle());
+        smallText.setText(item.getDetails());
+        Glide.with(this).load(item.getImageUrl())
+                .centerCrop()
+                .crossFade()
+                .placeholder(R.drawable.custom_progress)
+                .into(mImageView);
+    }
+
+    @Override
+    public void start() {
+        start(HowedMenuActivity.class);
     }
 
     @Override

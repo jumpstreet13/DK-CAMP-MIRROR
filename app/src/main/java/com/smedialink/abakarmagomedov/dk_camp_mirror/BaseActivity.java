@@ -11,6 +11,9 @@ import android.support.v7.widget.Toolbar;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.IntentUtils;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -25,6 +28,10 @@ public class BaseActivity extends AppCompatActivity {
         Intent intent = new Intent(this, where);
         intent.putExtra(IntentUtils.WEB, arg);
         startActivity(intent);
+    }
+
+    public void start(Class<?> where, @Nullable String... arg){
+        Intent intent = new Intent(this, where);
     }
 
     public void start(Class<?> where, @Nullable Bundle flag) {
@@ -56,8 +63,9 @@ public class BaseActivity extends AppCompatActivity {
     public void hideProgress() {
         if(mProgressDialog != null){
             if(mProgressDialog.isShowing()){
-                mProgressDialog.hide();
+                mProgressDialog.dismiss();
             }
         }
     }
+
 }

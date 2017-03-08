@@ -12,16 +12,17 @@ import android.view.MenuItem;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.OpleveslerActivitySecond;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Discount;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerActivitySecond;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerAdapter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.InteractorModule;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
 
 import java.util.List;
 
 import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -37,8 +38,7 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
         setContentView(R.layout.activity_oplevelser_first);
         ButterKnife.bind(this);
         setToolbar(mToolbar);
-
-        App.get().getAppComponent().plusOplevelserComponent(new PresenterModule(this)).inject(this);
+        App.get().getAppComponent().plusComponent(new PresenterModule(this)).inject(this);
         mPresenter.fetchData();
     }
 
@@ -77,6 +77,17 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
     }
 
     @Override
+    public void sProgress() {
+        showProgress();
+    }
+
+    @Override
+    public void hProgress() {
+        hideProgress();
+    }
+
+
+    @Override
     public void success() {
 
     }
@@ -86,8 +97,11 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
 
     }
 
+
+
+
     @Override
-    public void show(List<OpleveslerItem> items) {
+    public void show(List<Discount> items) {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         OpleveslerAdapter adapter = new OpleveslerAdapter(items, this);
         mRecyclerView.setAdapter(adapter);
