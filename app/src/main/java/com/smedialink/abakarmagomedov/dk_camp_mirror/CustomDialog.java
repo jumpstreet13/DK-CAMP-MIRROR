@@ -1,4 +1,4 @@
-package com.smedialink.abakarmagomedov.dk_camp_mirror.utils;
+package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 
 import android.app.DialogFragment;
@@ -11,7 +11,6 @@ import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.SpinnerAdapter;
 
 import java.util.List;

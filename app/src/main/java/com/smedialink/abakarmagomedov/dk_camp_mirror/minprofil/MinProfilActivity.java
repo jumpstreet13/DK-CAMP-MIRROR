@@ -44,6 +44,8 @@ public class MinProfilActivity extends BaseActivity implements MinProfilView {
     @BindView(R.id.status_min_profil) Button status;
     @BindView(R.id.seekBar2) SeekBar experience;
     @BindView(R.id.aendringer) Button aedringer;
+    @BindView(R.id.mine_intereser_min_profil) Button interest;
+    @BindView(R.id.mine_feriet_min_profil) Button feriet;
     @Inject Presenter mMinPresenter;
 
     @OnTouch(R.id.seekBar2)
@@ -98,7 +100,6 @@ public class MinProfilActivity extends BaseActivity implements MinProfilView {
         email.setText(user.getEmail());
         birth.setText(user.getBirthdayString());
         experience.setProgress(user.getCampingExperience());
-
     }
 
     @Override

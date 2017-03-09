@@ -23,8 +23,6 @@ public class ChoiceActivity extends BaseActivity {
         start(SignUpActivity.class);
     }
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -22,13 +22,12 @@ public class SplashActivity extends BaseActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (mDataManager.getPreferenceManager().getUserExist().equals("YES")) {
+                if (validate(mDataManager)) {
                     start(HowedMenuActivity.class);
                 } else {
                     start(StartActivity.class);
                 }
             }
         }, 1000);
-
     }
 }

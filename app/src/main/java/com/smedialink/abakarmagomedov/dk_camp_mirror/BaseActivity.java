@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 
-import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.CustomDialog;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.managers.DataManager;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.IntentUtils;
 
 import java.util.List;
@@ -82,20 +82,10 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle state){
         super.onCreate(state);
-        //App.get().getAppComponent().plusDataComponent().inject(this);
     }
 
-  /*  @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("VALIDATE", validate() + "");
-        if(validate())s
-            start(LogInActivity.class);
-    }*/
-    // TODO: 09.03.17 Логирование пользователя
-
-   /* public boolean validate(){
+    public boolean validate(DataManager dataManager){
         return dataManager.getPreferenceManager().getUserExist().equals("NO");
-    }*/
+    }
 
 }

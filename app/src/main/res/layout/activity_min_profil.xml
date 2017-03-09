@@ -154,6 +154,7 @@
                     android:text="@string/single"/>
 
                 <Button
+                    android:text="@string/mine_interesser"
                     android:id="@+id/mine_intereser_min_profil"
                     android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                     android:layout_height="wrap_content"
@@ -165,6 +166,7 @@
                     android:textAlignment="center"/>
 
                 <Button
+                    android:text="@string/mine_ferietyper"
                     android:id="@+id/mine_feriet_min_profil"
                     android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                     android:gravity="center"
