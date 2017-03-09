@@ -55,5 +55,11 @@
         <item name="android:fullDark">@android:color/transparent</item>
     </style>
 
+    <style name="BlueText">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold|normal</item>
+    </style>
+
 
 </resources>

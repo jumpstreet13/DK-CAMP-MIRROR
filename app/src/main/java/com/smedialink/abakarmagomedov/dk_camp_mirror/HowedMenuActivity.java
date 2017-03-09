@@ -1,9 +1,8 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.MinProfilActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -47,5 +46,13 @@ public class HowedMenuActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_howed_menu);
         ButterKnife.bind(this);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //User user = DataManager.getInstance().getPreferenceManager().getUser();
+        //Toast.makeText(this, user.getFirstName(), Toast.LENGTH_SHORT).show();
     }
 }

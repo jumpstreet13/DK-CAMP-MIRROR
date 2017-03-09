@@ -9,6 +9,8 @@ import java.net.CookieManager;
 import java.net.CookiePolicy;
 
 
+import javax.inject.Inject;
+
 import okhttp3.JavaNetCookieJar;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -34,5 +36,4 @@ public class ServiceGenerator {
         Retrofit retrofit = sBuilder.client(sHttpClient.build()).build();
         return retrofit.create(serviceClass);
     }
-
 }

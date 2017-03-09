@@ -46,7 +46,7 @@
                 app:riv_mutate_background="true"/>
 
             <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/frameLayout"
+                android:id="@+id/avatar_min_profil"
                 android:layout_width="@dimen/logo_width_in_activity_profil"
                 android:layout_height="@dimen/logo_height_in_activity_profil"
                 android:layout_centerHorizontal="true"
@@ -59,7 +59,7 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/frameLayout"
+                android:layout_alignBottom="@+id/avatar_min_profil"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:paddingBottom="5dp"
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/frameLayout" android:layout_marginTop="20dp"
+                android:layout_below="@+id/avatar_min_profil" android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <EditText
@@ -200,7 +200,7 @@
                 android:orientation="vertical">
 
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/mine_intereser_min_profil"
                     android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -210,7 +210,7 @@
                     android:textAlignment="center"/>
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/mine_feriet_min_profil"
                     android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

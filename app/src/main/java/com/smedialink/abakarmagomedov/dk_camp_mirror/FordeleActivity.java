@@ -24,14 +24,6 @@ public class FordeleActivity extends BaseActivity{
 
 
     @Override
-    protected void onResume() {
-        super.onPostResume();
-        Log.d("VALIDATE", App.validate() + "");
-        if(App.validate())
-            start(LogInActivity.class);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fordele);

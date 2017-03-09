@@ -1,5 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,10 +10,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+
+import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.CustomDialog;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.IntentUtils;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
+import java.util.List;
+
 
 
 public class BaseActivity extends AppCompatActivity {
@@ -67,5 +70,32 @@ public class BaseActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void showDialog(List<String> params){
+        FragmentManager fm = getFragmentManager();
+        CustomDialog customDialog = CustomDialog.newInstance();
+        customDialog.setList(params);
+        customDialog.show(fm, "fragment");
+    }
+
+
+    @Override
+    protected void onCreate(Bundle state){
+        super.onCreate(state);
+        //App.get().getAppComponent().plusDataComponent().inject(this);
+    }
+
+  /*  @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("VALIDATE", validate() + "");
+        if(validate())s
+            start(LogInActivity.class);
+    }*/
+    // TODO: 09.03.17 Логирование пользователя
+
+   /* public boolean validate(){
+        return dataManager.getPreferenceManager().getUserExist().equals("NO");
+    }*/
 
 }

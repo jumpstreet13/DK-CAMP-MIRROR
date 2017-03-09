@@ -5,6 +5,9 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivi
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LogInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LoginInteractor;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.managers.DataManager;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.Interactor;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.MinInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerInteractorSecond;
 
@@ -25,7 +28,10 @@ public class InteractorModule {
     }
 
     @Provides
-    LoginInteractor provideLoginInteractor(){
-        return new LogInteractor();
+    LoginInteractor provideLoginInteractor(DataManager dataManager){
+        return new LogInteractor(dataManager);
     }
+
+    @Provides
+    Interactor provideInteractor(DataManager dataManager){return new MinInteractor(dataManager);}
 }

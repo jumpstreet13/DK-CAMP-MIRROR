@@ -16,7 +16,6 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Discount;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerActivitySecond;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerAdapter;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
 
 import java.util.List;
@@ -38,7 +37,7 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
         setContentView(R.layout.activity_oplevelser_first);
         ButterKnife.bind(this);
         setToolbar(mToolbar);
-        App.get().getAppComponent().plusComponent(new PresenterModule(this)).inject(this);
+        App.get().getAppComponent().plusOplevelserComponent(new PresenterModule(this)).inject(this);
         mPresenter.fetchData();
     }
 

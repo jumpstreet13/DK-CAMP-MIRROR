@@ -9,11 +9,16 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LogPresenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LoginInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LoginPresenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LoginView;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.Interactor;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.MinPresenter;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.MinProfilView;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.Presenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerInteractor;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerInteractorSecond;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerPresenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerPresenterSecond;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerView;
+
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -24,32 +29,44 @@ public class PresenterModule {
     private OplevelserFirstView mOplevelserFirstView;
     private OpleveslerView mOpleveslerView;
     private LoginView mLoginView;
+    private MinProfilView mMinProfilView;
 
-    public PresenterModule(OplevelserFirstView oplevelserFirstView){
+    public PresenterModule(OplevelserFirstView oplevelserFirstView) {
         this.mOplevelserFirstView = oplevelserFirstView;
     }
 
-    public PresenterModule(OpleveslerView opleveslerView){
+    public PresenterModule(OpleveslerView opleveslerView) {
         this.mOpleveslerView = opleveslerView;
     }
 
-    public PresenterModule(LoginView loginView){
+    public PresenterModule(LoginView loginView) {
         this.mLoginView = loginView;
     }
 
+    public PresenterModule(MinProfilView minProfilView){
+        mMinProfilView = minProfilView;
+    }
+
+
     @Provides
-    OplevelserActivityPresenter provideOplevelserActivityPresenter(OplevelserActivityInteractor oplevelserActivityInteractor){
+    OplevelserActivityPresenter provideOplevelserActivityPresenter(OplevelserActivityInteractor oplevelserActivityInteractor) {
         return new OplevelserActivityFirstPresenter(mOplevelserFirstView, oplevelserActivityInteractor);
     }
 
     @Provides
-    OpleveslerPresenter provideOpleveslerPresenter(OpleveslerInteractor opleveslerInteractor){
+    OpleveslerPresenter provideOpleveslerPresenter(OpleveslerInteractor opleveslerInteractor) {
         return new OpleveslerPresenterSecond(mOpleveslerView, opleveslerInteractor);
     }
 
     @Provides
-    LoginPresenter provideLoginAcitvityPresenter(LoginInteractor loginInteractor){
+    LoginPresenter provideLoginAcitvityPresenter(LoginInteractor loginInteractor) {
         return new LogPresenter(mLoginView, loginInteractor);
     }
+
+    @Provides
+    Presenter provideMinPresenter(Interactor interactor){
+        return new MinPresenter(mMinProfilView, interactor);
+    }
+
 
 }

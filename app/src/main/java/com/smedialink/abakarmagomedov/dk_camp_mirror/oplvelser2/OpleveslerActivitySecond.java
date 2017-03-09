@@ -14,11 +14,7 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Discount;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.OpleveslerItem;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import javax.inject.Inject;
 
@@ -41,7 +37,7 @@ public class OpleveslerActivitySecond extends BaseActivity implements Oplevesler
         setContentView(R.layout.activity_oplevesler_second);
         ButterKnife.bind(this);
         setToolbar(mToolbar);
-        App.get().getAppComponent().plusComponent(new PresenterModule(this)).inject(this);
+        App.get().getAppComponent().plusOplevelserComponent2(new PresenterModule(this)).inject(this);
         mOplevelserActivityPresenter.fetchData();
     }
 
@@ -67,9 +63,6 @@ public class OpleveslerActivitySecond extends BaseActivity implements Oplevesler
         bigText.setText(item.getTitle());
         smallText.setText(item.getDetails());
         Glide.with(this).load(item.getImageUrl())
-                .centerCrop()
-                .crossFade()
-                .placeholder(R.drawable.custom_progress)
                 .into(mImageView);
     }
 

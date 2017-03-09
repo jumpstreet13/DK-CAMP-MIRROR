@@ -77,7 +77,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity"/>
         </activity>
-        <activity android:name=".MinProfilActivity"
+        <activity android:name=".minprofil.MinProfilActivity"
                   android:parentActivityName=".HowedMenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

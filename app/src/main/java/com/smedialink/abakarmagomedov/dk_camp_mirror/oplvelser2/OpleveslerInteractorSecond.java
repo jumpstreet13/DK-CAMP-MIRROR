@@ -9,6 +9,10 @@ public class OpleveslerInteractorSecond implements OpleveslerInteractor {
     @Override
     public void fetchView(OpleveslerInteractor.OnFinishedListener listener) {
         Home home = Home.getInstanse();
-        listener.onSuccess(home.getFocusedItem());
+        if (home != null) {
+            listener.onSuccess(home.getFocusedItem());
+        } else {
+            listener.onError();
+        }
     }
 }

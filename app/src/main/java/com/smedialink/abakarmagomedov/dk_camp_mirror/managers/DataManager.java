@@ -6,27 +6,30 @@ import android.preference.PreferenceManager;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.DigitaltIdActivity;
 
+import javax.inject.Inject;
+
 public class DataManager {
 
-    private static DataManager instance = null;
-    private SharedPreferenceManager mPreferenceManager;
+    //private static DataManager instance = null;
+    SharedPreferenceManager mPreferenceManager;
 
-    private DataManager() {
-        mPreferenceManager = new SharedPreferenceManager();
-    }
+   // private DataManager() {
 
-    public static DataManager getInstance() {
-        if (instance == null) {
+   // }
+
+ /*   public static DataManager getInstance() {
+       *//* if (instance == null) {
             instance = new DataManager();
         }
-        return instance;
+        return instance;*//*
+    }*/
+
+    public DataManager(SharedPreferenceManager manager){
+        mPreferenceManager = manager;
     }
 
     public SharedPreferenceManager getPreferenceManager(){
         return mPreferenceManager;
     }
-
-
-
 
 }
