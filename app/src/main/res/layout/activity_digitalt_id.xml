@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/grey_background_for_activity_digitait"
-            tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.DigitaltIdActivity">
+            tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigitaltIdActivity">
 
             <include android:id="@+id/logo"
                      layout="@layout/logo_layout"
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    tools:text="DK-CAMPING:ID"
+                    android:text="DK-CAMPING:ID"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size_of_the_bigger_textview_in_activitydigit"/>
@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    tools:text="FORDELSKLUB"
+                    android:text="FORDELSKLUB"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size_of_the_smallest_textview_in_activity_digitidid"/>
@@ -89,7 +89,7 @@
                     app:riv_corner_radius_bottom_right="@dimen/cornerRadius"/>
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/name_digit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -99,7 +99,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/mobil_digit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -109,7 +109,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
                 <TextView
-                    android:id="@+id/textView18"
+                    android:id="@+id/email_digit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -119,7 +119,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
                 <TextView
-                    android:id="@+id/textView19"
+                    android:id="@+id/address_digit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -129,7 +129,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/size_of_text_in_activity_digitaItId"/>
                 <TextView
-                    android:id="@+id/textView20"
+                    android:id="@+id/unical_digit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -155,7 +155,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
                 android:gravity="bottom|center"
-                tools:text="Din digitale legimation til masser af fordele\ni DK-CAMPING:ID Fordelsklubben."
+                android:text="@string/din_digitale_legimation_til_masser_af_fordele_ni_dk_camping_id_fordelsklubben"
                 android:textAlignment="center"
                 android:textSize="@dimen/size_of_text_in_activity_digitaItIdSmall"/>
 

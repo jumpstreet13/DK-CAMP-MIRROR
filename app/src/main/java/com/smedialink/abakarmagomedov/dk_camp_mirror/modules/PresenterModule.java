@@ -5,6 +5,10 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivi
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityPresenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserFirstView;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigInteractor;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigPresenter;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigPresenterImp;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigView;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LogPresenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LoginInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LoginPresenter;
@@ -30,6 +34,7 @@ public class PresenterModule {
     private OpleveslerView mOpleveslerView;
     private LoginView mLoginView;
     private MinProfilView mMinProfilView;
+    private DigView mDigView;
 
     public PresenterModule(OplevelserFirstView oplevelserFirstView) {
         this.mOplevelserFirstView = oplevelserFirstView;
@@ -45,6 +50,10 @@ public class PresenterModule {
 
     public PresenterModule(MinProfilView minProfilView){
         mMinProfilView = minProfilView;
+    }
+
+    public PresenterModule(DigView digView){
+        this.mDigView = digView;
     }
 
 
@@ -66,6 +75,11 @@ public class PresenterModule {
     @Provides
     Presenter provideMinPresenter(Interactor interactor){
         return new MinPresenter(mMinProfilView, interactor);
+    }
+
+    @Provides
+    DigPresenter provideDigPresenter(DigInteractor digInteractor){
+        return  new DigPresenterImp(mDigView, digInteractor);
     }
 
 

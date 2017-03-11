@@ -21,9 +21,10 @@ public class OplevelserActivityFirstPresenter implements OplevelserActivityPrese
     }
 
     @Override
-    public void invoke() {
+    public void invoke(Discount item) {
         OplevelserFirstView view = oplevelserFirstView.get();
         if (view != null) {
+            oplevelserActivityInteractor.setFocused(item);
             view.start();
         }
     }

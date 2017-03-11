@@ -68,5 +68,11 @@
     <string name="done">Done</string>
     <string name="mine_interesser">MINE INTERESSER</string>
     <string name="mine_ferietyper">MINE FERIETYPER</string>
+    <string name="din_digitale_legimation_til_masser_af_fordele_ni_dk_camping_id_fordelsklubben">Din
+        digitale legimation til masser af fordele\ni DK-CAMPING:ID Fordelsklubben.
+    </string>
+    <string name="er_du_sikker">Er du sikker?</string>
+    <string name="annullere">ANNULLERE</string>
+    <string name="log_ud">LOG UD</string>
 
 </resources>

@@ -10,13 +10,20 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.SpinnerAdapter;
-
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class CustomDialog extends DialogFragment {
     List<String> list;
+    @BindView(R.id.list_in_spinner_layout) ListView listView;
+    @OnClick(R.id.textView_in_spinner_layout)
+    void onClik(){
+        dismiss();
+    }
 
     public CustomDialog(){
 
@@ -34,15 +41,7 @@ public class CustomDialog extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.spinner_layout, container);
-        TextView textView = (TextView)view.findViewById(R.id.textView_in_spinner_layout);
-        // TODO: 09.03.17 Butterknife
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dismiss();
-            }
-        });
-        ListView listView = (ListView)view.findViewById(R.id.list_in_spinner_layout);
+        ButterKnife.bind(this, view);
         if(list != null) listView.setAdapter(new SpinnerAdapter(list, view.getContext()));
         return view;
     }
@@ -50,7 +49,6 @@ public class CustomDialog extends DialogFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:theme="@android:style/Theme.NoTitleBar"
+              style="@style/hidetitle">
+    <TextView
+        style="@style/BlackText"
+        android:text="@string/er_du_sikker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/textView7"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right">
+
+        <Button
+            style="@style/BlueText"
+            android:text="@string/annullere"
+            android:textSize="15sp"
+            android:gravity="right|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/negative_my_dialog"/>
+
+        <Button
+            style="@style/BlueText"
+            android:text="@string/log_ud"
+            android:textSize="15sp"
+            android:gravity="left|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/positive_my_dialog"/>
+
+    </LinearLayout>
+
+</LinearLayout>

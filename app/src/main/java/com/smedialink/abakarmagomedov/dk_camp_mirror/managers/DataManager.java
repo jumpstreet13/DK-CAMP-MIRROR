@@ -1,13 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.managers;
 
 
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-
-import com.smedialink.abakarmagomedov.dk_camp_mirror.DigitaltIdActivity;
-
-import javax.inject.Inject;
-
 public class DataManager {
 
     //private static DataManager instance = null;

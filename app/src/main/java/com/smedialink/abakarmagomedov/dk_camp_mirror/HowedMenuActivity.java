@@ -2,6 +2,7 @@ package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 import android.os.Bundle;
 
+import com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigitaltIdActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.MinProfilActivity;
 
 import butterknife.ButterKnife;
@@ -52,7 +53,6 @@ public class HowedMenuActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        //User user = DataManager.getInstance().getPreferenceManager().getUser();
-        //Toast.makeText(this, user.getFirstName(), Toast.LENGTH_SHORT).show();
+
     }
 }

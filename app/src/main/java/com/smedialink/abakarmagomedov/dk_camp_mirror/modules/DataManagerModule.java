@@ -20,5 +20,4 @@ public class DataManagerModule {
     DataManager provideDataManager(SharedPreferenceManager sh){
         return new DataManager(sh);
     }
-
 }

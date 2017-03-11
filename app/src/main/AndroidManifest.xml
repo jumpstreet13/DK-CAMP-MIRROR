@@ -40,7 +40,7 @@
         <activity android:name=".HowedMenuActivity"/>
         <activity android:name=".ProfilActivity"/>
 
-        <activity android:name=".DigitaltIdActivity"
+        <activity android:name=".digit.DigitaltIdActivity"
                   android:parentActivityName=".HowedMenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

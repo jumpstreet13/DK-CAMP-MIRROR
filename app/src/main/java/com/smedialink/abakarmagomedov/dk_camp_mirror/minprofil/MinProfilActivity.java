@@ -8,17 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.MyDialog;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LogInActivity;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.managers.DataManager;
-import com.smedialink.abakarmagomedov.dk_camp_mirror.models.SpinnerAdapter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.User;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
 
@@ -31,7 +28,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnTouch;
 
-public class MinProfilActivity extends BaseActivity implements MinProfilView {
+public class MinProfilActivity extends BaseActivity implements MinProfilView{
 
     @BindView(R.id.toolBarInActivityMinProfil) Toolbar mToolbar;
     @BindView(R.id.avatar_min_profil) RoundedImageView avatar;
@@ -63,6 +60,8 @@ public class MinProfilActivity extends BaseActivity implements MinProfilView {
         mMinPresenter.clikced(view.getId());
     }
 
+    private MyDialog dialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,8 +83,7 @@ public class MinProfilActivity extends BaseActivity implements MinProfilView {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.log_ud:
-                mMinPresenter.setUserNotExist();
-                start(LogInActivity.class);
+                mMinPresenter.showExitDialog();
                 return true;
         }
         return false;
@@ -93,7 +91,7 @@ public class MinProfilActivity extends BaseActivity implements MinProfilView {
 
     @Override
     public void success(User user) {
-        name.setText(user.getFirstName());
+        name.setText(user.getFullName());
         adress.setText(user.getAddresslineOne());
         postnr.setText(user.getPostNumber());
         mobile.setText(user.getMobileNumber());
@@ -111,6 +109,23 @@ public class MinProfilActivity extends BaseActivity implements MinProfilView {
     public void showDlg(List<String> data) {
         showDialog(data);
     }
+
+    @Override
+    public void showAlertDialog(MyDialog.MyDialogListener listener) {
+        dialog = new MyDialog(this, R.layout.my_dialog, R.id.positive_my_dialog, R.id.negative_my_dialog, listener);
+        dialog.show();
+    }
+
+    @Override
+    public void dissmissDialog() {
+        dialog.dismiss();
+    }
+
+    @Override
+    public void goToLogin() {
+        start(LogInActivity.class);
+    }
+
 }
 
 

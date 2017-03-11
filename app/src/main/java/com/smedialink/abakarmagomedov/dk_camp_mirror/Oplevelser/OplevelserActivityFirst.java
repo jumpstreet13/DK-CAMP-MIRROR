@@ -61,8 +61,8 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
 
 
     @Override
-    public void onItemClick() {
-        mPresenter.invoke();
+    public void onItemClick(Discount item) {
+        mPresenter.invoke(item);
     }
 
     @Override
@@ -96,14 +96,13 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
 
     }
 
-
-
-
     @Override
     public void show(List<Discount> items) {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         OpleveslerAdapter adapter = new OpleveslerAdapter(items, this);
         mRecyclerView.setAdapter(adapter);
     }
+
+
 
 }

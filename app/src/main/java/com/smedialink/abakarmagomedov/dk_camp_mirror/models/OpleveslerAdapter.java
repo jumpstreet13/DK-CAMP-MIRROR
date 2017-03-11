@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -15,6 +16,8 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -23,7 +26,6 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
 
     private List<Discount> listItems;
     private OplevelserFirstView mOpleListener;
-
 
     public OpleveslerAdapter(List<Discount> listItems, @NonNull OplevelserFirstView opleListener) {
         this.listItems = listItems;
@@ -49,6 +51,7 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
     }
 
     static class OpleveslerActivityHolder extends RecyclerView.ViewHolder {
+        @Inject Home mHome;
 
         @BindView(R.id.bigTextViewInActivityOpleveslerSecond) TextView bigText;
         @BindView(R.id.smallTextViewInActivityOpleveslerSecond) TextView smallText;
@@ -58,9 +61,8 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
 
         @OnClick(R.id.linelayInOpleveslerList)
         void onImageClick() {
-            mOpleListener.onItemClick();
-            Home home = Home.getInstanse();
-            home.setFocusedItem(mItem);
+            mOpleListener.onItemClick(mItem);
+            //mHome.setFocusedItem(mItem);
         }
 
         OpleveslerActivityHolder(View itemView) {
@@ -78,7 +80,6 @@ public class OpleveslerAdapter extends RecyclerView.Adapter<OpleveslerAdapter.Op
             mItem = item;
         }
     }
-
 
 }
 

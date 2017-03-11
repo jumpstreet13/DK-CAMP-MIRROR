@@ -7,18 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Home {
-    private static Home instanse;
     private Discount item;
 
-    private Home(){
+    public Home(){
     }
 
-    public static Home getInstanse(){
-        if(instanse == null){
-            instanse = new Home();
-        }
-        return instanse;
-    }
 
     public void setFocusedItem(Discount item){
         this.item = item;

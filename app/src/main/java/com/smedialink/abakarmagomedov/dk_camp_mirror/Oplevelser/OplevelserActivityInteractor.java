@@ -9,6 +9,7 @@ import java.util.List;
 public interface OplevelserActivityInteractor {
 
     void fetchOplevelsers(final OnFinishedListener listener);
+    void setFocused(final Discount discount);
 
     interface OnFinishedListener {
         void onError();

@@ -6,11 +6,16 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Home;
 
 public class OpleveslerInteractorSecond implements OpleveslerInteractor {
 
+    private final Home mHome;
+
+    public OpleveslerInteractorSecond(Home home) {
+        mHome = home;
+    }
+
     @Override
     public void fetchView(OpleveslerInteractor.OnFinishedListener listener) {
-        Home home = Home.getInstanse();
-        if (home != null) {
-            listener.onSuccess(home.getFocusedItem());
+        if (mHome != null) {
+            listener.onSuccess(mHome.getFocusedItem());
         } else {
             listener.onError();
         }
