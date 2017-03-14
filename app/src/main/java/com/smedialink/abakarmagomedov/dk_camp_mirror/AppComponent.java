@@ -6,6 +6,7 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.components.LogInComponent;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.components.MinProfilComponent;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.components.OplevelserComponent;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.components.OplevelserComponent2;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.components.TaetComponent;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.Presenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.AppModule;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.DataManagerModule;
@@ -26,5 +27,6 @@ public interface AppComponent {
     MinProfilComponent plusMinProfilComponent(PresenterModule presenterModule);
     OplevelserComponent2 plusOplevelserComponent2(PresenterModule presenterModule);
     DigComponent plusDigComponent(PresenterModule presenterModule);
+    TaetComponent plusTaetComponent(PresenterModule presenterModule);
     void inject(SplashActivity splashActivity);
 }

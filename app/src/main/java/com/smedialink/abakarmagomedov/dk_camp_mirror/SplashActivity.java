@@ -23,9 +23,11 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void run() {
                 if (validate(mDataManager)) {
-                    start(HowedMenuActivity.class);
-                } else {
                     start(StartActivity.class);
+                    finish();
+                } else {
+                    start(HowedMenuActivity.class);
+                    finish();
                 }
             }
         }, 1000);

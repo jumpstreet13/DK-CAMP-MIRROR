@@ -1,5 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -68,7 +69,7 @@ public class OpleveslerActivitySecond extends BaseActivity implements Oplevesler
 
     @Override
     public void start() {
-        start(HowedMenuActivity.class);
+        start(HowedMenuActivity.class, Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP);
     }
 
     @Override

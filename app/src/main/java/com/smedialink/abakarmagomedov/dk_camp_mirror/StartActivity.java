@@ -12,6 +12,7 @@ import butterknife.OnClick;
 
 public class StartActivity extends BaseActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,11 @@ public class StartActivity extends BaseActivity {
     @OnClick(R.id.buttonStartInActivityStart)
     void onButtonClick(){
         start(ChoiceActivity.class);
+    }
+
+    @OnClick(R.id.text_fordele)
+    void onTextClick(){
+        start(SignUpActivity.class);
     }
 
 }

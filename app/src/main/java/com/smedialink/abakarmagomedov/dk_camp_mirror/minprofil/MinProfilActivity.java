@@ -1,5 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -9,12 +10,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.ChoiceActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.MyDialog;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.StartActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.login.LogInActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.User;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
@@ -122,8 +126,8 @@ public class MinProfilActivity extends BaseActivity implements MinProfilView{
     }
 
     @Override
-    public void goToLogin() {
-        start(LogInActivity.class);
+    public void goToChoice() {
+        start(ChoiceActivity.class);
     }
 
 }

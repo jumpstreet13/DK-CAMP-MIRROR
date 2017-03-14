@@ -10,6 +10,7 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.PresenterModule;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.IntentUtils;
 
 import javax.inject.Inject;
 
@@ -25,6 +26,11 @@ public class LogInActivity extends BaseActivity implements LoginView {
     @OnClick(R.id.buttonlogInActivityLogiN)
     void onButtonClick(View v) {
         mLoginPresenter.click(v.getId());
+    }
+
+    @OnClick(R.id.text_forget_password)
+    void  onTextClick(){
+        mLoginPresenter.getPassword();
     }
 
 
@@ -57,5 +63,10 @@ public class LogInActivity extends BaseActivity implements LoginView {
     public void success() {
         Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
         start(HowedMenuActivity.class);
+    }
+
+    @Override
+    public void forgetPassword() {
+        startInternet(IntentUtils.FORGET_PASSWORD);
     }
 }

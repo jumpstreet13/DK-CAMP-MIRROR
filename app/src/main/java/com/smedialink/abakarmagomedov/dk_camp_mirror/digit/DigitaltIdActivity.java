@@ -52,7 +52,7 @@ public class DigitaltIdActivity extends BaseActivity implements DigView {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu:
                 start(HowedMenuActivity.class);
                 return true;

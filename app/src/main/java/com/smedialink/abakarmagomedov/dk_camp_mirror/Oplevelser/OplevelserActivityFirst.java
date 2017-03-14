@@ -1,13 +1,16 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.App;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.BaseActivity;
@@ -30,6 +33,7 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
     @Inject OplevelserActivityPresenter mPresenter;
     @BindView(R.id.toolBarInActivityOplevelserFirst) Toolbar mToolbar;
     @BindView(R.id.recyclerViewInActivityOplevesler) RecyclerView mRecyclerView;
+    @BindView(R.id.swipe_refresh_in_oplevelser_first) SwipeRefreshLayout mSwipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,12 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
         setContentView(R.layout.activity_oplevelser_first);
         ButterKnife.bind(this);
         setToolbar(mToolbar);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mPresenter.refreshData();
+            }
+        });
         App.get().getAppComponent().plusOplevelserComponent(new PresenterModule(this)).inject(this);
         mPresenter.fetchData();
     }
@@ -53,7 +63,7 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu:
-                start(HowedMenuActivity.class);
+                start(HowedMenuActivity.class, Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 return true;
         }
         return false;
@@ -87,11 +97,6 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
 
 
     @Override
-    public void success() {
-
-    }
-
-    @Override
     public void error() {
 
     }
@@ -101,8 +106,10 @@ public class OplevelserActivityFirst extends BaseActivity implements OplevelserF
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         OpleveslerAdapter adapter = new OpleveslerAdapter(items, this);
         mRecyclerView.setAdapter(adapter);
+        if (mSwipeRefreshLayout.isRefreshing()) {
+            mSwipeRefreshLayout.setRefreshing(false);
+        }
     }
-
 
 
 }

@@ -12,7 +12,6 @@ public interface OplevelserFirstView {
     void hProgress();
     void onItemClick(Discount item);
     void start();
-    void success();
     void error();
     void show(List<Discount> items);
 }

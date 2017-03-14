@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/size_of_elements_in_recycler_view"
+        android:layout_height="wrap_content"
+        android:text="@string/placering_service_er_deaktivere"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/size_of_text_in_activity_profil"
+        android:textColor="@color/black" android:id="@+id/textView4"/>
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold|normal"
+        android:textSize="@dimen/text_size_in_activity_sign_up"
+        android:text="@string/du_bor_aktivere_hoj_nojagtighed_nplacering_tilstand"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <Button
+            style="@style/BlueText"
+            android:text="@string/annullere"
+            android:textSize="@dimen/button_text_size_in_start_activity"
+            android:gravity="right|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/negative_gps_dialog"/>
+
+        <Button
+            style="@style/BlueText"
+            android:text="@string/ja"
+            android:textSize="@dimen/button_text_size_in_start_activity"
+            android:gravity="left|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/positive_gps_dialog"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

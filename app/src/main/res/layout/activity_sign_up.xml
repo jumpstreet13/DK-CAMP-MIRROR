@@ -42,7 +42,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="36dp"
-        android:id="@+id/button2" />
+        android:id="@+id/button_tilmeld" />
 
 
     <LinearLayout

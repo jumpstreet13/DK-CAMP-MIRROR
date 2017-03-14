@@ -39,6 +39,11 @@ public class OplevelserActivityFirstPresenter implements OplevelserActivityPrese
     }
 
     @Override
+    public void refreshData() {
+        oplevelserActivityInteractor.fetchOplevelsers(this);
+    }
+
+    @Override
     public void onError() {
         OplevelserFirstView view = oplevelserFirstView.get();
         if (view != null) {
@@ -55,4 +60,6 @@ public class OplevelserActivityFirstPresenter implements OplevelserActivityPrese
             view.hProgress();
         }
     }
+
+    // TODO: 13.03.17 Отступы у Pixel C
 }

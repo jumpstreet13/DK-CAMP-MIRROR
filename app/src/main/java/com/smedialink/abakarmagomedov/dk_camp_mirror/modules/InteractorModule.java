@@ -1,6 +1,8 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.modules;
 
 
+import android.content.Context;
+
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityFirstInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.Oplevelser.OplevelserActivityInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigInteractor;
@@ -13,6 +15,8 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.MinInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.Home;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerInteractor;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerInteractorSecond;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPaInteractor;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPaInteractorImp;
 
 import dagger.Module;
 import dagger.Provides;
@@ -40,4 +44,7 @@ public class InteractorModule {
 
     @Provides
     DigInteractor provideDigInteractor(DataManager dataManager){return new DigInteractorImp(dataManager);}
+
+    @Provides
+    TaetPaInteractor provideTaetInteractor(Context context){return new TaetPaInteractorImp(context);}
 }

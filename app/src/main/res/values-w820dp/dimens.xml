@@ -15,7 +15,7 @@
     <dimen name="bigText_size_in_activity_spil_og_vil">40sp</dimen>
     <dimen name="text_size_in_activity_spil_og_vil">34sp</dimen>
     <dimen name="button_text_size_in_start_activity">29sp</dimen>
-    <dimen name="size_of_text_in_activity_profil">26sp</dimen>
+    <dimen name="size_of_text_in_activity_profil">22sp</dimen>
     <dimen name="size_of_text_in_activity_digitaItIdSmall">25sp</dimen>
     <dimen name="size_of_text_in_activity_digitaItId">24sp</dimen>
     <dimen name="text_size_in_activity_log_in">50sp</dimen>

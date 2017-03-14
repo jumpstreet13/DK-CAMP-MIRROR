@@ -33,13 +33,14 @@
         android:id="@+id/textView3" />
 
     <TextView
+        style="@style/RippleTextView"
         android:text="@string/vis_fordele"
         android:textSize="@dimen/smallTextActivityStart"
         android:textStyle="bold|normal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:id="@+id/textView4"
+        android:id="@+id/text_fordele"
         android:layout_marginBottom="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -51,7 +52,7 @@
         android:layout_height="@dimen/height_of_button_in_activity_start"
         android:textSize="@dimen/button_text_size_in_start_activity"
         android:id="@+id/buttonStartInActivityStart"
-        android:layout_above="@+id/textView4"
+        android:layout_above="@+id/text_fordele"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp" />
 

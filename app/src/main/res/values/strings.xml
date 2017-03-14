@@ -74,5 +74,19 @@
     <string name="er_du_sikker">Er du sikker?</string>
     <string name="annullere">ANNULLERE</string>
     <string name="log_ud">LOG UD</string>
+    <string name="klik_og_find_vej">KLIK OG FIND VEJ</string>
+    <string
+        name="her_kan_du_se_alle_vores_campingpladser_og_nfinde_vej_til_den_naermeste_den_mindste_den_nhyggeligste_eller_lige_hvad_i_dromer_om_god_ntur">
+        Her kan du se alle vores campingpladser og\nfinde vej til den naermeste, den mindste,
+        den\nhyggeligste ...eller lige hvad I dromer om. God\ntur.
+    </string>
+    <string name="find_campingplads_taet_pa_n_dig">FIND CAMPINGPLADS TAET PA\nDIG</string>
+    <string name="find_dk_stellplatze_taet_pa_ndig">FIND DK-STELLPLATZE TAET PA\nDIG</string>
+    <string name="placering_service_er_deaktivere">Placering service er deaktivere</string>
+    <string name="du_bor_aktivere_hoj_nojagtighed_nplacering_tilstand">Du bor aktivere hoj
+        nojagtighed\nplacering tilstand
+    </string>
+    <string name="ja">JA</string>
+    <string name="brug">BRUG KUN VED CHECK IN</string>
 
 </resources>

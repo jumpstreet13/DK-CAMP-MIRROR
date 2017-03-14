@@ -2,8 +2,13 @@ package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 
 import android.app.Application;
+import android.content.Context;
+import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.modules.AppModule;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.utils.ConstantManager;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -40,6 +45,5 @@ public class App extends Application {
         Document document = Jsoup.parse(parse);
         return document.text();
     }
-
 
 }

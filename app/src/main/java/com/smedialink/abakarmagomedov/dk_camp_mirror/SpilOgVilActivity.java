@@ -1,6 +1,7 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomSheetBehavior;
 import android.os.Bundle;

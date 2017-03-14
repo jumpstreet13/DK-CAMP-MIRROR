@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_taet_pa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPa">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar_in_activity_taet_pa"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolBarSize"
+        android:background="@color/white"
+        android:theme="@style/ToolbarTheme"
+        android:title=""
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolbarTextAppearens">
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_oplevelser"
+            app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/find_campingplads_taet_pa_n_dig"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_in_activity_sign_up"
+            android:textStyle="bold|normal"/>
+
+        <Button
+            android:id="@+id/taet_pa_button_first"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_foreground_imageview_selector"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_oplevelser"
+            app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/find_dk_stellplatze_taet_pa_ndig"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_in_activity_sign_up"
+            android:textStyle="bold|normal"/>
+
+        <Button
+            android:id="@+id/taet_pa_button_second"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_foreground_imageview_selector"/>
+
+    </FrameLayout>
+
+
+    <TextView
+        style="@style/BlackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/klik_og_find_vej"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/her_kan_du_se_alle_vores_campingpladser_og_nfinde_vej_til_den_naermeste_den_mindste_den_nhyggeligste_eller_lige_hvad_i_dromer_om_god_ntur"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="15dp"
+        android:textSize="@dimen/size_of_text_in_activity_profil"/>
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="16dp"
+              android:layout_marginRight="16dp"
+              android:background="@color/grey"/>
+    <TextView
+        android:id="@+id/dissapear_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brug"
+        android:textColor="@color/white"
+        android:layout_gravity="center"/>
+
+    <SeekBar
+        android:id="@+id/slideBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:thumbOffset="@dimen/activity_horizontal_margin"
+        android:maxHeight="50dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/slide_bar"
+        android:thumb="@drawable/thumb_slide_bar"/>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

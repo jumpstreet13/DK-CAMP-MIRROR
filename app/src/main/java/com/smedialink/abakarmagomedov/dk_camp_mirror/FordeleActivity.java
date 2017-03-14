@@ -1,5 +1,6 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -15,12 +16,14 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class FordeleActivity extends BaseActivity{
+public class FordeleActivity extends BaseActivity {
 
     @BindView(R.id.toolBarInActivityFordele) Toolbar mToolbar;
 
     @OnClick(R.id.opleveslerImageButton)
-    void onOpleveslerClick() {start(OplevelserActivityFirst.class);}
+    void onOpleveslerClick() {
+        start(OplevelserActivityFirst.class);
+    }
 
 
     @Override

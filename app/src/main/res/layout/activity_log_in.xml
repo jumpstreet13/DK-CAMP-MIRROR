@@ -85,6 +85,7 @@
         android:id="@+id/editText2" />
 
     <TextView
+        style="@style/RippleTextView"
         android:text="@string/glemt_kode"
         android:textSize="@dimen/size_of_text_in_activity_profil"
         android:textColor="@color/white"
@@ -94,7 +95,7 @@
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:id="@+id/textView6" />
+        android:id="@+id/text_forget_password" />
 
 
 

@@ -5,4 +5,5 @@
     <dimen name="size_of_text_in_activity_digitaItIdSmall">12sp</dimen>
     <dimen name="margin_bottom_in_choice_activity">41dp</dimen>
     <dimen name="height_of_button_in_activity_choice">40dp</dimen>
+    <dimen name="size_of_text_in_activity_profil">10sp</dimen>
 </resources>

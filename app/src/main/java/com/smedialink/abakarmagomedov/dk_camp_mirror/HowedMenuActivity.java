@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.smedialink.abakarmagomedov.dk_camp_mirror.digit.DigitaltIdActivity;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil.MinProfilActivity;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPa;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -34,7 +35,7 @@ public class HowedMenuActivity extends BaseActivity {
     @Optional
     @OnClick(R.id.buttonTaetPa)
     void onTaetClick() {
-        start(ProfilActivity.class);
+        start(TaetPa.class);
     }
 
     @Optional

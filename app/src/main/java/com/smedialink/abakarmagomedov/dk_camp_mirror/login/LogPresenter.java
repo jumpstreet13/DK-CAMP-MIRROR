@@ -30,6 +30,14 @@ public class LogPresenter implements LoginPresenter, LoginInteractor.OnFinishedL
     }
 
     @Override
+    public void getPassword() {
+        LoginView view = mLoginView.get();
+        if(view!=null){
+            view.forgetPassword();
+        }
+    }
+
+    @Override
     public void onError() {
         LoginView view = mLoginView.get();
         if(view!=null){

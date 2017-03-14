@@ -21,6 +21,10 @@ import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerIntera
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerPresenter;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerPresenterSecond;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.oplvelser2.OpleveslerView;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPaInteractor;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPaPresenter;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPaPresenterImp;
+import com.smedialink.abakarmagomedov.dk_camp_mirror.taetpa.TaetPaView;
 
 import javax.inject.Singleton;
 
@@ -35,6 +39,11 @@ public class PresenterModule {
     private LoginView mLoginView;
     private MinProfilView mMinProfilView;
     private DigView mDigView;
+    private TaetPaView mTaetPaView;
+
+    public PresenterModule(TaetPaView taetPaView) {
+        mTaetPaView = taetPaView;
+    }
 
     public PresenterModule(OplevelserFirstView oplevelserFirstView) {
         this.mOplevelserFirstView = oplevelserFirstView;
@@ -56,6 +65,11 @@ public class PresenterModule {
         this.mDigView = digView;
     }
 
+
+    @Provides
+    TaetPaPresenter provideTaetPaPresenter(TaetPaInteractor interactor){
+        return new TaetPaPresenterImp(mTaetPaView, interactor);
+    }
 
     @Provides
     OplevelserActivityPresenter provideOplevelserActivityPresenter(OplevelserActivityInteractor oplevelserActivityInteractor) {

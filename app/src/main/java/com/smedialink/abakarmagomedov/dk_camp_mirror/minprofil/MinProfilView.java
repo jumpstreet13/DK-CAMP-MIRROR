@@ -13,5 +13,5 @@ public interface MinProfilView {
     void showDlg(List<String> data);
     void showAlertDialog(MyDialog.MyDialogListener listener);
     void dissmissDialog();
-    void goToLogin();
+    void goToChoice();
 }

@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_howed_menu"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_howed_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.smedialink.abakarmagomedov.dk_camp_mirror.HowedMenuActivity">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/background_menu"
         android:scaleType="centerCrop"
+        android:src="@drawable/background_menu"
         app:riv_corner_radius_top_left="@dimen/cornerRadius"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
         <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-            style="@style/ButtonsInHowedMenu"
-            android:background="@drawable/howed_menu_item_pressed_rounded"
-            android:text="@string/min_profil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/buttonMinProfil"
-            android:layout_weight="1"/>
-
-
-        <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-        style="@style/ButtonsInHowedMenu"
-        android:text="@string/camping_id"
-        app:whereDrawLine="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonCampingId"
-        android:layout_weight="1"/>
-
-        <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
             style="@style/ButtonsInHowedMenu"
-            android:text="@string/fordele"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/howed_menu_item_pressed_rounded"
+            android:text="@string/min_profil"/>
+
+
+        <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
+            android:id="@+id/buttonCampingId"
+            style="@style/ButtonsInHowedMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/camping_id"
+            app:whereDrawLine="bottom"/>
+
+        <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
             android:id="@+id/buttonFordele"
-            android:layout_weight="1"/>
+            style="@style/ButtonsInHowedMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fordele"/>
 
 
         <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-        style="@style/ButtonsInHowedMenu"
-        android:text="@string/t_t_p"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonTaetPa"
-        android:layout_weight="1" />
+            android:id="@+id/buttonTaetPa"
+            style="@style/ButtonsInHowedMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/t_t_p"/>
 
         <com.smedialink.abakarmagomedov.dk_camp_mirror.CustomButton
-        style="@style/ButtonsInHowedMenu"
-        android:text="@string/spil_og_vind"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonSpilOgVind"
-        android:layout_weight="1"/>
+            android:id="@+id/buttonSpilOgVind"
+            style="@style/ButtonsInHowedMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/spil_og_vind"/>
 
     </LinearLayout>
 

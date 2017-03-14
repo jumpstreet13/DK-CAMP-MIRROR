@@ -63,13 +63,18 @@
 
     <style name="BlackText">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/text_size_in_activity_sign_up</item>
         <item name="android:textStyle">bold|normal</item>
     </style>
 
     <style name="hidetitle" parent="android:style/Theme.Dialog">
         <item name="android:windowBackground">@null</item>
         <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <style name="RippleTextView">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
     </style>
 
 

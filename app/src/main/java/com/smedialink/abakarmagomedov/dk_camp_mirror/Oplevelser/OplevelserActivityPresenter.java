@@ -7,4 +7,5 @@ public interface OplevelserActivityPresenter {
 
     void invoke(Discount item);
     void fetchData();
+    void refreshData();
 }

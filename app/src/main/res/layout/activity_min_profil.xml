@@ -154,6 +154,7 @@
                     android:text="@string/single"/>
 
                 <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:text="@string/mine_interesser"
                     android:id="@+id/mine_intereser_min_profil"
                     android:layout_width="@dimen/size_of_spinner_in_activity_profil"
@@ -162,17 +163,18 @@
                     android:gravity="center"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/custom_spinner"
+                    android:background="@drawable/spinner_selector"
                     android:textAlignment="center"/>
 
                 <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:text="@string/mine_ferietyper"
                     android:id="@+id/mine_feriet_min_profil"
                     android:layout_width="@dimen/size_of_spinner_in_activity_profil"
                     android:gravity="center"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="@drawable/custom_spinner"
+                    android:background="@drawable/spinner_selector"
                     android:textAlignment="center"/>
 
                 <TextView
@@ -191,7 +193,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:max="10"
+                    android:max="40"
                     android:saveEnabled="true"
                     android:clickable="false"
                     android:maxHeight="3dp"

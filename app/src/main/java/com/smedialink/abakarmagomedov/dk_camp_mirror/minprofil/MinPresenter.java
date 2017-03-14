@@ -1,7 +1,5 @@
 package com.smedialink.abakarmagomedov.dk_camp_mirror.minprofil;
 
-import android.content.DialogInterface;
-
 import com.smedialink.abakarmagomedov.dk_camp_mirror.MyDialog;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.R;
 import com.smedialink.abakarmagomedov.dk_camp_mirror.models.User;
@@ -66,10 +64,6 @@ public class MinPresenter implements Presenter, MinInteractor.OnFinishedListener
         mInteractor.getUserData(this);
     }
 
-    @Override
-    public void setUserNotExist() {
-        mInteractor.deleteUser();
-    }
 
     @Override
     public void clikced(int id) {
@@ -95,7 +89,8 @@ public class MinPresenter implements Presenter, MinInteractor.OnFinishedListener
     public void onPositive() {
         MinProfilView view = mView.get();
         if (view != null) {
-            view.goToLogin();
+            view.goToChoice();
+            mInteractor.deleteUser();
         }
     }
 

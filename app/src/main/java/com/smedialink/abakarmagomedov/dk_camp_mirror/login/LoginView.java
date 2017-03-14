@@ -11,4 +11,5 @@ public interface LoginView {
     void hProgress();
     void error();
     void success();
+    void forgetPassword();
 }
